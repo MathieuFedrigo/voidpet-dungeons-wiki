@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "HelloWorld",
-    "slug": "expo-template-default",
+    "name": "Voidpet Dungeons Wiki",
+    "slug": "voidpet-dungeons-wiki",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -9,13 +9,15 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mldddd.voidpetdungeonswiki"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.mldddd.voidpetdungeonswiki"
     },
     "web": {
       "bundler": "metro",
@@ -36,6 +38,18 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "230be399-45bc-4dca-a96f-8f9e81933b18"
+      }
+    },
+    "owner": "mldddd",
+    "updates": {
+      "url": "https://u.expo.dev/230be399-45bc-4dca-a96f-8f9e81933b18"
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
     }
   }
 }
