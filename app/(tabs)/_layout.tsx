@@ -1,14 +1,23 @@
 /* eslint-disable react/no-unstable-nested-components */
 import { useTheme } from "@emotion/react";
-import { Tabs } from "expo-router";
+import { Slot, Tabs } from "expo-router";
 import { Platform } from "react-native";
 
 import { HapticTab } from "@/components/HapticTab";
 import { IconSymbol } from "@/components/ui/IconSymbol";
 import TabBarBackground from "@/components/ui/TabBarBackground";
+import Header from "@/components/WebHeader";
 
 export default function TabLayout() {
   const theme = useTheme();
+
+  if (Platform.OS === "web")
+    return (
+      <>
+        <Header />
+        <Slot />
+      </>
+    );
 
   return (
     <Tabs
