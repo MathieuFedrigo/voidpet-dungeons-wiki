@@ -5,7 +5,7 @@ import { ThemedText } from "./ThemedText";
 
 const navItems = [
   { label: "Home", path: "/" },
-  { label: "Explore", path: "/explore" },
+  { label: "Items", path: "/items" },
 ] as const;
 
 export default function Header() {
