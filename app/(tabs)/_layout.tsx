@@ -3,10 +3,10 @@ import { useTheme } from "@emotion/react";
 import { Slot, Tabs } from "expo-router";
 import { Platform } from "react-native";
 
-import { HapticTab } from "@/components/HapticTab";
+import { HapticTab } from "@/components/ui/HapticTab";
 import { IconSymbol } from "@/components/ui/IconSymbol";
 import TabBarBackground from "@/components/ui/TabBarBackground";
-import Header from "@/components/WebHeader";
+import Header from "@/components/ui/WebHeader";
 
 export default function TabLayout() {
   const theme = useTheme();
