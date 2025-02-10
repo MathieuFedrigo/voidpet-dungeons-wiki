@@ -49,7 +49,8 @@ export const ItemCard = ({
 
 const Container = styled.View(({ theme }) => ({
   backgroundColor: theme.colors.voidpet.basic.light,
-  width: 420,
+  minWidth: 320,
+  maxWidth: 420,
   borderTopLeftRadius: 32,
   borderBottomRightRadius: 32,
 }));
