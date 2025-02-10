@@ -40,5 +40,5 @@ const BottomBlackBar = styled.View(({ theme }) => ({
   bottom: 0,
   width: 64,
   height: 9,
-  backgroundColor: theme.colors.voidpet.basic.text,
+  backgroundColor: theme.colors.voidpet.basic.dark,
 }));

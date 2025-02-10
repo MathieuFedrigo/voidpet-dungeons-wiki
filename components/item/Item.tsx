@@ -48,7 +48,7 @@ export const ItemCard = ({
 };
 
 const Container = styled.View(({ theme }) => ({
-  backgroundColor: theme.colors.voidpet.basic.background,
+  backgroundColor: theme.colors.voidpet.basic.light,
   width: 420,
   alignItems: "center",
   borderTopLeftRadius: 32,
@@ -85,13 +85,13 @@ const RarityLabel = styled.Text<{ rarity: ItemRarity }>(
 const ItemName = styled.Text(({ theme }) => ({
   fontSize: 18,
   fontWeight: "900",
-  color: theme.colors.voidpet.basic.text,
+  color: theme.colors.voidpet.basic.dark,
   marginBottom: 4,
 }));
 
 const Description = styled.Text(({ theme }) => ({
   fontSize: 14,
-  color: theme.colors.voidpet.basic.text,
+  color: theme.colors.voidpet.basic.dark,
   textAlign: "center",
 }));
 
@@ -108,5 +108,5 @@ const StatsContainer = styled.View({
 
 const StatText = styled.Text(({ theme }) => ({
   fontSize: 14,
-  color: theme.colors.voidpet.basic.text,
+  color: theme.colors.voidpet.basic.dark,
 }));
