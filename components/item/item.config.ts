@@ -8,7 +8,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { defense: 10 },
     rarity: "common",
     slot: "neck",
-    image: "",
   },
   redBowTie: {
     id: "redBowTie",
@@ -16,7 +15,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 10 },
     rarity: "common",
     slot: "neck",
-    image: "",
   },
   peachDolphinFloat: {
     id: "peachDolphinFloat",
@@ -24,7 +22,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { speed: 3 },
     rarity: "common",
     slot: "neck",
-    image: "",
   },
   turquoiseHeartCollar: {
     id: "turquoiseHeartCollar",
@@ -32,7 +29,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 10 },
     rarity: "common",
     slot: "neck",
-    image: "",
   },
   daisyChain: {
     id: "daisyChain",
@@ -40,7 +36,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { crit: 2 },
     rarity: "common",
     slot: "neck",
-    image: "",
   },
   leaf: {
     id: "leaf",
@@ -48,7 +43,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { speed: 3 },
     rarity: "common",
     slot: "hat",
-    image: "",
   },
   cosmosFlower: {
     id: "cosmosFlower",
@@ -56,7 +50,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { defense: 10 },
     rarity: "common",
     slot: "hat",
-    image: "",
   },
   pinkDandelion: {
     id: "pinkDandelion",
@@ -64,7 +57,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 10 },
     rarity: "common",
     slot: "hat",
-    image: "",
   },
   dandelion: {
     id: "dandelion",
@@ -72,7 +64,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { crit: 2 },
     rarity: "common",
     slot: "hat",
-    image: "",
   },
   amanitaMushroom: {
     id: "amanitaMushroom",
@@ -80,7 +71,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 10 },
     rarity: "common",
     slot: "hat",
-    image: "",
   },
 
   // ------------- rare -------------
@@ -90,7 +80,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { crit: 1.4, attack: 7 },
     rarity: "rare",
     slot: "neck",
-    image: "",
   },
   redRibbonScarf: {
     id: "redRibbonScarf",
@@ -98,7 +87,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 7, attack: 7 },
     rarity: "rare",
     slot: "neck",
-    image: "",
   },
   blueRibbonScarf: {
     id: "blueRibbonScarf",
@@ -106,7 +94,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { defense: 7, crit: 1.4 },
     rarity: "rare",
     slot: "neck",
-    image: "",
   },
   yellowRibbonScarf: {
     id: "yellowRibbonScarf",
@@ -114,7 +101,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 7, defense: 7 },
     rarity: "rare",
     slot: "neck",
-    image: "",
   },
   greenRibbonScarf: {
     id: "greenRibbonScarf",
@@ -122,7 +108,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { speed: 2, defense: 7 },
     rarity: "rare",
     slot: "neck",
-    image: "",
   },
   lavenderRibbonScarf: {
     id: "lavenderRibbonScarf",
@@ -130,7 +115,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 7, speed: 2 },
     rarity: "rare",
     slot: "neck",
-    image: "",
   },
   seaDolphinFloat: {
     id: "seaDolphinFloat",
@@ -138,7 +122,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 7, speed: 2 },
     rarity: "rare",
     slot: "neck",
-    image: "",
   },
   blueButterflyChain: {
     id: "blueButterflyChain",
@@ -146,7 +129,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { crit: 1.4, speed: 2 },
     rarity: "rare",
     slot: "neck",
-    image: "",
   },
   platinumDiamondNecklace: {
     id: "platinumDiamondNecklace",
@@ -154,7 +136,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { crit: 1.4, stamina: 7 },
     rarity: "rare",
     slot: "neck",
-    image: "",
   },
   maroonRibbonScarf: {
     id: "maroonRibbonScarf",
@@ -162,7 +143,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 7, defense: 7 },
     rarity: "rare",
     slot: "neck",
-    image: "",
   },
   shitakeMushroom: {
     id: "shitakeMushroom",
@@ -170,7 +150,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 7, defense: 7 },
     rarity: "rare",
     slot: "hat",
-    image: "",
   },
   beeAntennae: {
     id: "beeAntennae",
@@ -178,7 +157,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 7, speed: 2 },
     rarity: "rare",
     slot: "hat",
-    image: "",
   },
   batHeadband: {
     id: "batHeadband",
@@ -186,7 +164,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { crit: 1.4, speed: 2 },
     rarity: "rare",
     slot: "hat",
-    image: "",
   },
   rubyHairBow: {
     id: "rubyHairBow",
@@ -194,7 +171,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 7, attack: 7 },
     rarity: "rare",
     slot: "hat",
-    image: "",
   },
   deathCapMushroom: {
     id: "deathCapMushroom",
@@ -202,7 +178,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { speed: 2, defense: 7 },
     rarity: "rare",
     slot: "hat",
-    image: "",
   },
   baseBallCap: {
     id: "baseBallCap",
@@ -210,7 +185,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { crit: 1.4, stamina: 7 },
     rarity: "rare",
     slot: "hat",
-    image: "",
   },
   backwardsCap: {
     id: "backwardsCap",
@@ -218,7 +192,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { crit: 1.4, attack: 7 },
     rarity: "rare",
     slot: "hat",
-    image: "",
   },
   beigeBeret: {
     id: "beigeBeret",
@@ -226,7 +199,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { defense: 7, crit: 1.4 },
     rarity: "rare",
     slot: "hat",
-    image: "",
   },
   cherryBlossomCrown: {
     id: "cherryBlossomCrown",
@@ -234,7 +206,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 7, defense: 7 },
     rarity: "rare",
     slot: "hat",
-    image: "",
   },
   tropicalWreath: {
     id: "tropicalWreath",
@@ -242,7 +213,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { speed: 2, stamina: 7 },
     rarity: "rare",
     slot: "hat",
-    image: "",
   },
 
   // ------------- epic -------------
@@ -252,7 +222,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 10, defense: 10 },
     rarity: "epic",
     slot: "hat",
-    image: "",
   },
   coralSunHat: {
     id: "coralSunHat",
@@ -260,7 +229,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 10, speed: 3 },
     rarity: "epic",
     slot: "hat",
-    image: "",
   },
   purpleBeanie: {
     id: "purpleBeanie",
@@ -268,7 +236,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { crit: 2, defense: 10 },
     rarity: "epic",
     slot: "hat",
-    image: "",
   },
   bluePalmCap: {
     id: "bluePalmCap",
@@ -276,7 +243,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { defense: 10, speed: 3 },
     rarity: "epic",
     slot: "hat",
-    image: "",
   },
   topHat: {
     id: "topHat",
@@ -284,7 +250,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 10, attack: 10 },
     rarity: "epic",
     slot: "hat",
-    image: "",
   },
   yellowPalmCap: {
     id: "yellowPalmCap",
@@ -292,7 +257,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { speed: 3, crit: 2 },
     rarity: "epic",
     slot: "hat",
-    image: "",
   },
   peonyWreath: {
     id: "peonyWreath",
@@ -300,7 +264,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 10, defense: 10 },
     rarity: "epic",
     slot: "hat",
-    image: "",
   },
   redHat: {
     id: "redHat",
@@ -308,7 +271,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { crit: 2, stamina: 10 },
     rarity: "epic",
     slot: "hat",
-    image: "",
   },
   hibiscusFlower: {
     id: "hibiscusFlower",
@@ -316,7 +278,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 10, speed: 3 },
     rarity: "epic",
     slot: "hat",
-    image: "",
   },
   spiderHat: {
     id: "spiderHat",
@@ -324,7 +285,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { crit: 2, attack: 10 },
     rarity: "epic",
     slot: "hat",
-    image: "",
   },
   cowboyScarf: {
     id: "cowboyScarf",
@@ -332,7 +292,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 10, defense: 10 },
     rarity: "epic",
     slot: "neck",
-    image: "",
   },
   warmPinkScarf: {
     id: "warmPinkScarf",
@@ -340,7 +299,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 10, speed: 3 },
     rarity: "epic",
     slot: "neck",
-    image: "",
   },
   chunkyKnitScarf: {
     id: "chunkyKnitScarf",
@@ -348,7 +306,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 10, attack: 10 },
     rarity: "epic",
     slot: "neck",
-    image: "",
   },
   fallCamelScarf: {
     id: "fallCamelScarf",
@@ -356,7 +313,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { defense: 10, speed: 3 },
     rarity: "epic",
     slot: "neck",
-    image: "",
   },
   aquaSpikedCollar: {
     id: "aquaSpikedCollar",
@@ -364,7 +320,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { crit: 2, speed: 3 },
     rarity: "epic",
     slot: "neck",
-    image: "",
   },
   hibiscusChain: {
     id: "hibiscusChain",
@@ -372,7 +327,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { speed: 3, attack: 10 },
     rarity: "epic",
     slot: "neck",
-    image: "",
   },
   orangeButterflyChain: {
     id: "orangeButterflyChain",
@@ -380,7 +334,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { defense: 10, attack: 10 },
     rarity: "epic",
     slot: "neck",
-    image: "",
   },
   goldDiamondNecklace: {
     id: "goldDiamondNecklace",
@@ -388,7 +341,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { crit: 2, defense: 10 },
     rarity: "epic",
     slot: "neck",
-    image: "",
   },
   blackSpikedCollar: {
     id: "blackSpikedCollar",
@@ -396,7 +348,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { crit: 2, attack: 10 },
     rarity: "epic",
     slot: "neck",
-    image: "",
   },
   pinkSpikedCollar: {
     id: "pinkSpikedCollar",
@@ -404,7 +355,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { crit: 2, stamina: 10 },
     rarity: "epic",
     slot: "neck",
-    image: "",
   },
 
   // ------------- trinkets -------------
@@ -414,7 +364,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 7 },
     rarity: "rare",
     slot: "trinket",
-    image: "",
   },
   leatherJournal: {
     id: "leatherJournal",
@@ -422,7 +371,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { crit: 1.4 },
     rarity: "rare",
     slot: "trinket",
-    image: "",
   },
   lycheeCandle: {
     id: "lycheeCandle",
@@ -430,7 +378,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { speed: 2 },
     rarity: "rare",
     slot: "trinket",
-    image: "",
   },
   yogaMat: {
     id: "yogaMat",
@@ -438,7 +385,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 7 },
     rarity: "rare",
     slot: "trinket",
-    image: "",
   },
   weightedBlanket: {
     id: "weightedBlanket",
@@ -446,7 +392,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { defense: 7 },
     rarity: "rare",
     slot: "trinket",
-    image: "",
   },
 
   stressBall: {
@@ -455,7 +400,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { crit: 2 },
     rarity: "epic",
     slot: "trinket",
-    image: "",
   },
   fuzzyMittens: {
     id: "fuzzyMittens",
@@ -463,7 +407,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { defense: 10 },
     rarity: "epic",
     slot: "trinket",
-    image: "",
   },
   espressoShot: {
     id: "espressoShot",
@@ -471,7 +414,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { speed: 3 },
     rarity: "epic",
     slot: "trinket",
-    image: "",
   },
   fluffyPillow: {
     id: "fluffyPillow",
@@ -479,7 +421,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 10 },
     rarity: "epic",
     slot: "trinket",
-    image: "",
   },
   softDumbbell: {
     id: "softDumbbell",
@@ -487,7 +428,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 10 },
     rarity: "epic",
     slot: "trinket",
-    image: "",
   },
 
   // ------------- legendary -------------
@@ -497,7 +437,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 15, crit: 3.2 },
     rarity: "legendary",
     slot: "neck",
-    image: "rubyCollar.png",
   },
   sorrowScarf: {
     id: "sorrowScarf",
@@ -505,7 +444,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { defense: 15, speed: 4 },
     rarity: "legendary",
     slot: "neck",
-    image: "sorrowScarf.png",
   },
   anxietyScarf: {
     id: "anxietyScarf",
@@ -513,7 +451,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 15, crit: 4 },
     rarity: "legendary",
     slot: "neck",
-    image: "anxietyScarf.png",
   },
   angryScarf: {
     id: "angryScarf",
@@ -521,7 +458,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 19, crit: 2.2 },
     rarity: "legendary",
     slot: "neck",
-    image: "angryScarf.png",
   },
   enviousScarf: {
     id: "enviousScarf",
@@ -529,7 +465,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { defense: 15, crit: 3.2 },
     rarity: "legendary",
     slot: "neck",
-    image: "enviousScarf.png",
   },
   cakeScarf: {
     id: "cakeScarf",
@@ -537,7 +472,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 15, defense: 15 },
     rarity: "legendary",
     slot: "neck",
-    image: "cakeScarf.png",
   },
   paisleyCowboyScarf: {
     id: "paisleyCowboyScarf",
@@ -545,7 +479,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 15, defense: 15 },
     rarity: "legendary",
     slot: "neck",
-    image: "paisleyCowboyScarf.png",
   },
   checkeredScarf: {
     id: "checkeredScarf",
@@ -553,7 +486,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 15, defense: 15 },
     rarity: "legendary",
     slot: "neck",
-    image: "checkeredScarf.png",
   },
   bejeweledPinkScarf: {
     id: "bejeweledPinkScarf",
@@ -561,7 +493,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 18, defense: 12 },
     rarity: "legendary",
     slot: "neck",
-    image: "bejeweledPinkScarf.png",
   },
   mermaidScarf: {
     id: "mermaidScarf",
@@ -569,7 +500,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 15, attack: 15 },
     rarity: "legendary",
     slot: "neck",
-    image: "mermaidScarf.png",
   },
   watermelonSpikedCollar: {
     id: "watermelonSpikedCollar",
@@ -577,7 +507,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { speed: 3, crit: 4.1 },
     rarity: "legendary",
     slot: "neck",
-    image: "watermelonSpikedCollar.png",
   },
   lemonDolphinFloat: {
     id: "lemonDolphinFloat",
@@ -585,7 +514,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 10, crit: 5 },
     rarity: "legendary",
     slot: "neck",
-    image: "lemonDolphinFloat.png",
   },
   serpentScarf: {
     id: "serpentScarf",
@@ -593,7 +521,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 15, crit: 3.2 },
     rarity: "legendary",
     slot: "neck",
-    image: "serpentScarf.png",
   },
   spiderNecklace: {
     id: "spiderNecklace",
@@ -601,7 +528,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 15, crit: 3.2 },
     rarity: "legendary",
     slot: "neck",
-    image: "spiderNecklace.png",
   },
   bubblegumScarf: {
     id: "bubblegumScarf",
@@ -609,7 +535,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 12, crit: 5 },
     rarity: "legendary",
     slot: "neck",
-    image: "bubblegumScarf.png",
   },
   jellyfishScarf: {
     id: "jellyfishScarf",
@@ -617,7 +542,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 7, attack: 22 },
     rarity: "legendary",
     slot: "neck",
-    image: "jellyfishScarf.png",
   },
   princesCollar: {
     id: "princesCollar",
@@ -625,7 +549,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 12, defense: 18 },
     rarity: "legendary",
     slot: "neck",
-    image: "princesCollar.png",
   },
   rubberRingDonut: {
     id: "rubberRingDonut",
@@ -633,7 +556,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 18, speed: 3 },
     rarity: "legendary",
     slot: "neck",
-    image: "rubberRingDonut.png",
   },
   wizardCape: {
     id: "wizardCape",
@@ -641,7 +563,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 15, speed: 4 },
     rarity: "legendary",
     slot: "neck",
-    image: "wizardCape.png",
   },
   blueTie: {
     id: "blueTie",
@@ -649,7 +570,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { speed: 4, crit: 3.2 },
     rarity: "legendary",
     slot: "neck",
-    image: "blueTie.png",
   },
 
   feltFedora: {
@@ -658,7 +578,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 15, defense: 15 },
     rarity: "legendary",
     slot: "hat",
-    image: "feltFedora.png",
   },
   titaniumTiara: {
     id: "titaniumTiara",
@@ -666,7 +585,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { defense: 18, crit: 2.5 },
     rarity: "legendary",
     slot: "hat",
-    image: "titaniumTiara.png",
   },
   silkTopHat: {
     id: "silkTopHat",
@@ -674,7 +592,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 19, crit: 2.2 },
     rarity: "legendary",
     slot: "hat",
-    image: "silkTopHat.png",
   },
   cakeHat: {
     id: "cakeHat",
@@ -682,7 +599,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { defense: 15, crit: 4 },
     rarity: "legendary",
     slot: "hat",
-    image: "cakeHat.png",
   },
   floralCrochetHat: {
     id: "floralCrochetHat",
@@ -690,7 +606,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 15, defense: 15 },
     rarity: "legendary",
     slot: "hat",
-    image: "floralCrochetHat.png",
   },
   wizardHat: {
     id: "wizardHat",
@@ -698,7 +613,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 18, defense: 12 },
     rarity: "legendary",
     slot: "hat",
-    image: "wizardHat.png",
   },
   goldenHalo: {
     id: "goldenHalo",
@@ -706,7 +620,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 15, attack: 15 },
     rarity: "legendary",
     slot: "hat",
-    image: "goldenHalo.png",
   },
   redHorns: {
     id: "redHorns",
@@ -714,7 +627,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 10, crit: 4.1 },
     rarity: "legendary",
     slot: "hat",
-    image: "redHorns.png",
   },
   unicornHorns: {
     id: "unicornHorns",
@@ -722,7 +634,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 18, crit: 3 },
     rarity: "legendary",
     slot: "hat",
-    image: "unicornHorns.png",
   },
   rainbowPartyHat: {
     id: "rainbowPartyHat",
@@ -730,7 +641,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { speed: 5, crit: 2.5 },
     rarity: "legendary",
     slot: "hat",
-    image: "rainbowPartyHat.png",
   },
   bejeweledCowboyHat: {
     id: "bejeweledCowboyHat",
@@ -738,7 +648,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 22, defense: 7 },
     rarity: "legendary",
     slot: "hat",
-    image: "bejeweledCowboyHat.png",
   },
   pirateHat: {
     id: "pirateHat",
@@ -746,7 +655,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 15, attack: 15 },
     rarity: "legendary",
     slot: "hat",
-    image: "pirateHat.png",
   },
   iceCreamHat: {
     id: "iceCreamHat",
@@ -754,7 +662,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 15, crit: 4 },
     rarity: "legendary",
     slot: "hat",
-    image: "iceCreamHat.png",
   },
   pinwheelHat: {
     id: "pinwheelHat",
@@ -762,7 +669,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 18, crit: 2.5 },
     rarity: "legendary",
     slot: "hat",
-    image: "pinwheelHat.png",
   },
   pearlClocheHat: {
     id: "pearlClocheHat",
@@ -770,7 +676,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 12, crit: 5 },
     rarity: "legendary",
     slot: "hat",
-    image: "pearlClocheHat.png",
   },
   icyTiara: {
     id: "icyTiara",
@@ -778,7 +683,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { defense: 15, crit: 4 },
     rarity: "legendary",
     slot: "hat",
-    image: "icyTiara.png",
   },
   chefHat: {
     id: "chefHat",
@@ -786,7 +690,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 18, crit: 3 },
     rarity: "legendary",
     slot: "hat",
-    image: "chefHat.png",
   },
   specialTopHat: {
     id: "specialTopHat",
@@ -794,7 +697,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 15, crit: 3.2 },
     rarity: "legendary",
     slot: "hat",
-    image: "specialTopHat.png",
   },
   karenHair: {
     id: "karenHair",
@@ -802,7 +704,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 12, defense: 18 },
     rarity: "legendary",
     slot: "hat",
-    image: "karenHair.png",
   },
   plungerHat: {
     id: "plungerHat",
@@ -810,7 +711,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 15, attack: 15, defense: 15, speed: 4, crit: 3.2 },
     rarity: "legendary",
     slot: "hat",
-    image: "plungerHat.png",
   },
 
   // ------------- uber -------------
@@ -820,7 +720,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 20, crit: 4.7 },
     rarity: "uber",
     slot: "neck",
-    image: "parasiteScarf.png",
   },
   dogeScarf: {
     id: "dogeScarf",
@@ -828,7 +727,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { defense: 20, speed: 5 },
     rarity: "uber",
     slot: "neck",
-    image: "dogeScarf.png",
   },
   alkalineEstrangementScarf: {
     id: "alkalineEstrangementScarf",
@@ -836,7 +734,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 20, speed: 5 },
     rarity: "uber",
     slot: "neck",
-    image: "alkalineEstrangementScarf.png",
   },
 
   adventureBuddyHat: {
@@ -845,7 +742,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 20, speed: 5 },
     rarity: "uber",
     slot: "hat",
-    image: "adventureBuddyHat.png",
   },
   laserChickenHat: {
     id: "laserChickenHat",
@@ -853,7 +749,6 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 40 },
     rarity: "uber",
     slot: "hat",
-    image: "laserChickenHat.png",
   },
   lonelyHat: {
     id: "lonelyHat",
@@ -861,6 +756,5 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 20, speed: 5 },
     rarity: "uber",
     slot: "hat",
-    image: "lonelyHat.png",
   },
 };

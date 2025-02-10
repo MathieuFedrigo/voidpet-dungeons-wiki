@@ -15,7 +15,6 @@ export type Item = {
   baseStats: ItemStats;
   rarity: ItemRarity;
   slot: "hat" | "neck" | "trinket";
-  image: string;
 };
 
 export type ItemId =
