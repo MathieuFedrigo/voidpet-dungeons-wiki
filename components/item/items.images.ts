@@ -3,7 +3,7 @@
 import { ImageSourcePropType } from "react-native";
 
 import { getItem } from "./item.config";
-import { ItemId, ItemRarity } from "./item.type";
+import { ItemId, ItemRarity, ItemSlot } from "./item.type";
 
 const ITEMS_IMAGES: Record<ItemId, ImageSourcePropType> = {
   // COMMON
@@ -136,3 +136,11 @@ const ITEMS_WAVE_BG: Record<ItemRarity, ImageSourcePropType> = {
 };
 
 export const getItemWaveBg = (id: ItemId) => ITEMS_WAVE_BG[getItem(id).rarity];
+
+const ITEMS_SLOT: Record<ItemSlot, ImageSourcePropType> = {
+  hat: require("../../assets/images/itemSlot/hat.png"),
+  neck: require("../../assets/images/itemSlot/neck.png"),
+  trinket: require("../../assets/images/itemSlot/trinket.png"),
+};
+
+export const getItemSlot = (id: ItemId) => ITEMS_SLOT[getItem(id).slot];

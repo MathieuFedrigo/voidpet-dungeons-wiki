@@ -8,13 +8,15 @@ export type ItemStats = {
 
 export type ItemRarity = "common" | "rare" | "epic" | "legendary" | "uber";
 
+export type ItemSlot = "hat" | "neck" | "trinket";
+
 export type Item = {
   id: ItemId;
   name: string;
   description?: string;
   baseStats: ItemStats;
   rarity: ItemRarity;
-  slot: "hat" | "neck" | "trinket";
+  slot: ItemSlot;
 };
 
 export const ITEM_IDS = [
