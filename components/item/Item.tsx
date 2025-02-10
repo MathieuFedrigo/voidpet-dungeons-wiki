@@ -2,7 +2,7 @@ import styled from "@emotion/native";
 
 import { ITEMS_CONFIG } from "./item.config";
 import { Item, ItemRarity } from "./item.type";
-import { getItemImage } from "./items.images";
+import { ItemImage } from "./ItemImage";
 
 type Props = { item: Item };
 
@@ -17,9 +17,7 @@ export const ItemCard = ({
     <Container>
       <RarityLabel rarity={rarity}>{rarity.toUpperCase()} GEAR</RarityLabel>
 
-      <ImageBackground rarity={rarity}>
-        <ItemImage source={getItemImage(id)} resizeMode="contain" />
-      </ImageBackground>
+      <ItemImage id={id} />
 
       <ItemName>{name}</ItemName>
 
@@ -87,19 +85,4 @@ const StatsContainer = styled.View({
 const StatText = styled.Text(({ theme }) => ({
   fontSize: 14,
   color: theme.colors.voidpet.basic.text,
-}));
-
-const ImageBackground = styled.View<{ rarity: ItemRarity }>(
-  ({ rarity, theme }) => ({
-    width: 64,
-    height: 64,
-    marginBottom: 8,
-    backgroundColor: theme.colors.voidpet.rarity[rarity].itemBackground,
-  }),
-);
-
-const ItemImage = styled.Image(() => ({
-  width: 64,
-  height: 64,
-  marginBottom: 8,
 }));
