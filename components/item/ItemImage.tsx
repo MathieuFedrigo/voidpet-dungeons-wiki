@@ -23,6 +23,9 @@ const ImageBackground = styled.View<{ rarity: ItemRarity }>(
     width: 64,
     height: 64,
     backgroundColor: theme.colors.voidpet.rarity[rarity].itemBackground,
+    borderTopLeftRadius: 24,
+    borderBottomRightRadius: 24,
+    overflow: "hidden",
   }),
 );
 
