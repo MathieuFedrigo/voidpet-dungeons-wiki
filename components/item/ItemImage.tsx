@@ -2,7 +2,7 @@ import styled from "@emotion/native";
 
 import { ITEMS_CONFIG } from "./item.config";
 import { Item, ItemRarity } from "./item.type";
-import { getItemImage, getItemWaveBg } from "./items.images";
+import { getItemImage, getItemSlot, getItemWaveBg } from "./items.images";
 
 export const ItemImage = ({ id }: { id: Item["id"] }) => {
   return (
@@ -10,7 +10,10 @@ export const ItemImage = ({ id }: { id: Item["id"] }) => {
       <StyledImage source={getItemImage(id)} resizeMode="contain" />
       <WaveBgImage source={getItemWaveBg(id)} resizeMode="stretch" />
       <BottomBlackBar />
-      <ItemSlotCircle />
+      <ItemSlotCircle>
+        <ItemSlotColor rarity={ITEMS_CONFIG[id].rarity} />
+      </ItemSlotCircle>
+      <SlotImage source={getItemSlot(id)} resizeMode="contain" />
     </ImageBackground>
   );
 };
@@ -54,4 +57,23 @@ const ItemSlotCircle = styled.View(({ theme }) => ({
   left: 0,
   justifyContent: "center",
   alignItems: "center",
+}));
+
+const ItemSlotColor = styled.View<{ rarity: ItemRarity }>(
+  ({ theme, rarity }) => ({
+    width: 16,
+    height: 16,
+    borderRadius: 16,
+    backgroundColor: theme.colors.voidpet.rarity[rarity].banner,
+    justifyContent: "center",
+    alignItems: "center",
+  }),
+);
+
+const SlotImage = styled.Image(() => ({
+  position: "absolute",
+  width: 20,
+  height: 20,
+  bottom: 0,
+  left: 0,
 }));
