@@ -2,7 +2,7 @@
 
 import { ImageSourcePropType } from "react-native";
 
-import { ItemId } from "./item.type";
+import { ItemId, ItemRarity } from "./item.type";
 
 const ITEMS_IMAGES: Record<ItemId, ImageSourcePropType> = {
   // COMMON
@@ -125,3 +125,14 @@ const ITEMS_IMAGES: Record<ItemId, ImageSourcePropType> = {
 };
 
 export const getItemImage = (id: ItemId) => ITEMS_IMAGES[id];
+
+const ITEMS_WAVE_BG: Record<ItemRarity, ImageSourcePropType> = {
+  common: require("../../assets/images/itemWaveBg/assets_imgs_itemwavebgs_common.png"),
+  rare: require("../../assets/images/itemWaveBg/assets_imgs_itemwavebgs_rare.png"),
+  epic: require("../../assets/images/itemWaveBg/assets_imgs_itemwavebgs_epic.png"),
+  legendary: require("../../assets/images/itemWaveBg/assets_imgs_itemwavebgs_legendary.png"),
+  uber: require("../../assets/images/itemWaveBg/assets_imgs_itemwavebgs_uber.png"),
+};
+
+export const getItemWaveBg = (itemRarity: ItemRarity) =>
+  ITEMS_WAVE_BG[itemRarity];
