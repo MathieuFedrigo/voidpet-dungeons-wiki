@@ -10,6 +10,7 @@ export const ItemImage = ({ id }: { id: Item["id"] }) => {
       <StyledImage source={getItemImage(id)} resizeMode="contain" />
       <WaveBgImage source={getItemWaveBg(id)} resizeMode="stretch" />
       <BottomBlackBar />
+      <ItemSlotCircle />
     </ImageBackground>
   );
 };
@@ -41,4 +42,16 @@ const BottomBlackBar = styled.View(({ theme }) => ({
   width: 64,
   height: 9,
   backgroundColor: theme.colors.voidpet.basic.dark,
+}));
+
+const ItemSlotCircle = styled.View(({ theme }) => ({
+  width: 20,
+  height: 20,
+  borderRadius: 16,
+  backgroundColor: theme.colors.voidpet.basic.dark,
+  position: "absolute",
+  bottom: 0,
+  left: 0,
+  justifyContent: "center",
+  alignItems: "center",
 }));
