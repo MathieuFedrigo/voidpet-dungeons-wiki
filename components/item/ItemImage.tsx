@@ -9,6 +9,7 @@ export const ItemImage = ({ id }: { id: Item["id"] }) => {
     <ImageBackground rarity={ITEMS_CONFIG[id].rarity}>
       <StyledImage source={getItemImage(id)} resizeMode="contain" />
       <WaveBgImage source={getItemWaveBg(id)} resizeMode="stretch" />
+      <BottomBlackBar />
     </ImageBackground>
   );
 };
@@ -32,4 +33,12 @@ const WaveBgImage = styled.Image(() => ({
   width: 64,
   top: 32,
   left: 0,
+}));
+
+const BottomBlackBar = styled.View(({ theme }) => ({
+  position: "absolute",
+  bottom: 0,
+  width: 64,
+  height: 9,
+  backgroundColor: theme.colors.voidpet.basic.text,
 }));
