@@ -62,7 +62,7 @@ const getRarityColor = (rarity: ItemRarity) => {
 };
 
 const Container = styled.View(({ theme }) => ({
-  backgroundColor: theme.colors.background,
+  backgroundColor: "#fff",
   padding: 16,
   borderRadius: 12,
   width: 320,

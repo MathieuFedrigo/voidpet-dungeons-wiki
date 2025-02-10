@@ -3,7 +3,7 @@ import { ItemRarity } from "@/components/item/item.type";
 const tintColorLight = "#0a7ea4";
 const tintColorDark = "#fff";
 
-const voidpetColors: Record<
+const voidpetRarityColors: Record<
   ItemRarity,
   { banner: string; itemBackground: string }
 > = {
@@ -29,6 +29,13 @@ const voidpetColors: Record<
   },
 } as const;
 
+const voidpetBasicColors = {
+  background: "#fff",
+  text: "#000",
+  lightText: "#fff",
+  separator: "#ECE9E9",
+};
+
 export const lightColors = {
   text: "#11181C",
   background: "#fff",
@@ -36,8 +43,8 @@ export const lightColors = {
   icon: "#687076",
   tabIconDefault: "#687076",
   tabIconSelected: tintColorLight,
-  voidpet: voidpetColors,
-} as const;
+  voidpet: { rarity: voidpetRarityColors, basic: voidpetBasicColors },
+};
 
 export const darkColors = {
   text: "#ECEDEE",
@@ -46,8 +53,5 @@ export const darkColors = {
   icon: "#9BA1A6",
   tabIconDefault: "#9BA1A6",
   tabIconSelected: tintColorDark,
-  voidpet: voidpetColors,
-} as const satisfies Record<
-  keyof typeof lightColors,
-  string | typeof voidpetColors
->;
+  voidpet: { rarity: voidpetRarityColors, basic: voidpetBasicColors },
+} satisfies typeof lightColors;
