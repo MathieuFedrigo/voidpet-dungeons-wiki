@@ -437,6 +437,7 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 15, crit: 3.2 },
     rarity: "legendary",
     slot: "neck",
+    description: "Attacks ignore 30% of defense",
   },
   sorrowScarf: {
     id: "sorrowScarf",
@@ -444,6 +445,7 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { defense: 15, speed: 4 },
     rarity: "legendary",
     slot: "neck",
+    description: "Debuffs applied last 1 turn longer",
   },
   anxietyScarf: {
     id: "anxietyScarf",
@@ -451,6 +453,7 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 15, crit: 4 },
     rarity: "legendary",
     slot: "neck",
+    description: "Gain 3% speed with each attack",
   },
   angryScarf: {
     id: "angryScarf",
@@ -458,6 +461,7 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 19, crit: 2.2 },
     rarity: "legendary",
     slot: "neck",
+    description: "Deal 20% more damage, take 20% more damage",
   },
   enviousScarf: {
     id: "enviousScarf",
@@ -465,6 +469,7 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { defense: 15, crit: 3.2 },
     rarity: "legendary",
     slot: "neck",
+    description: "20% chance to counter attack when attacked",
   },
   cakeScarf: {
     id: "cakeScarf",
@@ -472,6 +477,8 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 15, defense: 15 },
     rarity: "legendary",
     slot: "neck",
+    description:
+      "Healing effects that heal the target past 100% health apply a shield equal to the excess amount",
   },
   paisleyCowboyScarf: {
     id: "paisleyCowboyScarf",
@@ -479,6 +486,8 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 15, defense: 15 },
     rarity: "legendary",
     slot: "neck",
+    description:
+      "Gain a shield for 30% of your max health when you drop below 50% health",
   },
   checkeredScarf: {
     id: "checkeredScarf",
@@ -486,6 +495,7 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 15, defense: 15 },
     rarity: "legendary",
     slot: "neck",
+    description: "Gain 30% of your stamina and defense as attack",
   },
   bejeweledPinkScarf: {
     id: "bejeweledPinkScarf",
@@ -493,6 +503,7 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 18, defense: 12 },
     rarity: "legendary",
     slot: "neck",
+    description: "Healing is 50% more effective on targets below 30% health",
   },
   mermaidScarf: {
     id: "mermaidScarf",
@@ -500,6 +511,8 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 15, attack: 15 },
     rarity: "legendary",
     slot: "neck",
+    description:
+      "Dealing damage increases the healing of your next heal by 50%, healing increases the damage of your next attack by 50%",
   },
   watermelonSpikedCollar: {
     id: "watermelonSpikedCollar",
@@ -507,6 +520,7 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { speed: 3, crit: 4.1 },
     rarity: "legendary",
     slot: "neck",
+    description: "Chance to critically heal doubled",
   },
   lemonDolphinFloat: {
     id: "lemonDolphinFloat",
@@ -514,6 +528,8 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 10, crit: 5 },
     rarity: "legendary",
     slot: "neck",
+    description:
+      "Deal damage when applying debuffs to enemies, damage is based on enemy max HP",
   },
   serpentScarf: {
     id: "serpentScarf",
@@ -521,6 +537,7 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 15, crit: 3.2 },
     rarity: "legendary",
     slot: "neck",
+    description: "Take 50% reduced damage from multi target attacks",
   },
   spiderNecklace: {
     id: "spiderNecklace",
@@ -528,6 +545,8 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 15, crit: 3.2 },
     rarity: "legendary",
     slot: "neck",
+    description:
+      "Critical strike chance doubled, critical strikes deal 150% damage instead of 200%",
   },
   bubblegumScarf: {
     id: "bubblegumScarf",
@@ -535,6 +554,7 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 12, crit: 5 },
     rarity: "legendary",
     slot: "neck",
+    description: "Buffs applied last 1 turn longer",
   },
   jellyfishScarf: {
     id: "jellyfishScarf",
@@ -542,6 +562,7 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 7, attack: 22 },
     rarity: "legendary",
     slot: "neck",
+    description: "First single target skill becomes multi-target",
   },
   princesCollar: {
     id: "princesCollar",
@@ -549,6 +570,8 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 12, defense: 18 },
     rarity: "legendary",
     slot: "neck",
+    description:
+      "Shield all allies for 15% of your max health at start of battle",
   },
   rubberRingDonut: {
     id: "rubberRingDonut",
@@ -556,6 +579,8 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 18, speed: 3 },
     rarity: "legendary",
     slot: "neck",
+    description:
+      "On your 15th turn, gain 100% increases attack and speed for the remainder of the battle",
   },
   wizardCape: {
     id: "wizardCape",
@@ -563,6 +588,7 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 15, speed: 4 },
     rarity: "legendary",
     slot: "neck",
+    description: "Periodic effects immediately trigger when applied",
   },
   blueTie: {
     id: "blueTie",
@@ -570,6 +596,8 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { speed: 4, crit: 3.2 },
     rarity: "legendary",
     slot: "neck",
+    description:
+      "Using an ability causes your next basic attack to deal 100% increased damage",
   },
 
   feltFedora: {
@@ -578,6 +606,7 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 15, defense: 15 },
     rarity: "legendary",
     slot: "hat",
+    description: "Attacks heal for 20% of the damage dealt",
   },
   titaniumTiara: {
     id: "titaniumTiara",
@@ -585,6 +614,7 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { defense: 18, crit: 2.5 },
     rarity: "legendary",
     slot: "hat",
+    description: "Deal damage when attacked based on defense",
   },
   silkTopHat: {
     id: "silkTopHat",
@@ -592,6 +622,7 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 19, crit: 2.2 },
     rarity: "legendary",
     slot: "hat",
+    description: "First skill used in a battle has dual action",
   },
   cakeHat: {
     id: "cakeHat",
@@ -599,6 +630,7 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { defense: 15, crit: 4 },
     rarity: "legendary",
     slot: "hat",
+    description: "Ignore the first attack in a battle",
   },
   floralCrochetHat: {
     id: "floralCrochetHat",
@@ -606,6 +638,7 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 15, defense: 15 },
     rarity: "legendary",
     slot: "hat",
+    description: "Gain 3% health when attacked (heals 3% of your hp)",
   },
   wizardHat: {
     id: "wizardHat",
@@ -613,6 +646,7 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 18, defense: 12 },
     rarity: "legendary",
     slot: "hat",
+    description: "Periodic healing and damage increased by 30%",
   },
   goldenHalo: {
     id: "goldenHalo",
@@ -620,6 +654,8 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 15, attack: 15 },
     rarity: "legendary",
     slot: "hat",
+    description:
+      "The first time you take lethal damage in a battle, prevent the damage and heal for 30% of your max health",
   },
   redHorns: {
     id: "redHorns",
@@ -627,6 +663,7 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 10, crit: 4.1 },
     rarity: "legendary",
     slot: "hat",
+    description: "Critical strikes deal 20% more damage",
   },
   unicornHorns: {
     id: "unicornHorns",
@@ -634,6 +671,7 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 18, crit: 3 },
     rarity: "legendary",
     slot: "hat",
+    description: "Gain 2% attack each turn",
   },
   rainbowPartyHat: {
     id: "rainbowPartyHat",
@@ -641,6 +679,8 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { speed: 5, crit: 2.5 },
     rarity: "legendary",
     slot: "hat",
+    description:
+      "Basic attacks are repeated once, non-basic attack cannot be used",
   },
   bejeweledCowboyHat: {
     id: "bejeweledCowboyHat",
@@ -648,6 +688,7 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 22, defense: 7 },
     rarity: "legendary",
     slot: "hat",
+    description: "Gain 10% stamina",
   },
   pirateHat: {
     id: "pirateHat",
@@ -655,6 +696,7 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 15, attack: 15 },
     rarity: "legendary",
     slot: "hat",
+    description: "Every third attack is a guaranteed critical strike",
   },
   iceCreamHat: {
     id: "iceCreamHat",
@@ -662,6 +704,8 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 15, crit: 4 },
     rarity: "legendary",
     slot: "hat",
+    description:
+      "All healing deals damage to a random enemy based on the amount healed",
   },
   pinwheelHat: {
     id: "pinwheelHat",
@@ -669,6 +713,8 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 18, crit: 2.5 },
     rarity: "legendary",
     slot: "hat",
+    description:
+      "Gain 30% attack, defense, and speed as the last remaining ally",
   },
   pearlClocheHat: {
     id: "pearlClocheHat",
@@ -676,6 +722,7 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 12, crit: 5 },
     rarity: "legendary",
     slot: "hat",
+    description: "Healing effects remove a debuff from the affected allies",
   },
   icyTiara: {
     id: "icyTiara",
@@ -683,6 +730,8 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { defense: 15, crit: 4 },
     rarity: "legendary",
     slot: "hat",
+    description:
+      "Healing an ally increases the damage of their next attack by 20%",
   },
   chefHat: {
     id: "chefHat",
@@ -690,6 +739,7 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 18, crit: 3 },
     rarity: "legendary",
     slot: "hat",
+    description: "Heal 10% of your max health every turn",
   },
   specialTopHat: {
     id: "specialTopHat",
@@ -697,6 +747,7 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 15, crit: 3.2 },
     rarity: "legendary",
     slot: "hat",
+    description: "Overkill damage is split evenly among all remaining enemies",
   },
   karenHair: {
     id: "karenHair",
@@ -704,6 +755,7 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 12, defense: 18 },
     rarity: "legendary",
     slot: "hat",
+    description: "Act as a tank in battle",
   },
   plungerHat: {
     id: "plungerHat",
@@ -720,6 +772,7 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 20, crit: 4.7 },
     rarity: "uber",
     slot: "neck",
+    description: "All single target effects, heals, and attacks become aoe.",
   },
   dogeScarf: {
     id: "dogeScarf",
@@ -727,6 +780,7 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { defense: 20, speed: 5 },
     rarity: "uber",
     slot: "neck",
+    description: "Gain immunity to debuffs.",
   },
   alkalineEstrangementScarf: {
     id: "alkalineEstrangementScarf",
@@ -734,6 +788,8 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 20, speed: 5 },
     rarity: "uber",
     slot: "neck",
+    description:
+      "Heal all allies for 10% of you max health at the beginning of your turn.",
   },
 
   adventureBuddyHat: {
@@ -742,6 +798,8 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 20, speed: 5 },
     rarity: "uber",
     slot: "hat",
+    description:
+      "The first ability you use each turn is treated as an extra action.",
   },
   laserChickenHat: {
     id: "laserChickenHat",
@@ -749,6 +807,7 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { attack: 40 },
     rarity: "uber",
     slot: "hat",
+    description: "Gain 100% crit chance for 3 turns at the start of battle.",
   },
   lonelyHat: {
     id: "lonelyHat",
@@ -756,6 +815,7 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     baseStats: { stamina: 20, speed: 5 },
     rarity: "uber",
     slot: "hat",
+    description: "All ability cooldowns are reduced by 1.",
   },
 };
 export const getItem = (id: ItemId) => ITEMS_CONFIG[id];
