@@ -17,7 +17,9 @@ export const ItemCard = ({
     <Container>
       <RarityLabel rarity={rarity}>{rarity.toUpperCase()} GEAR</RarityLabel>
 
-      <ItemImage source={getItemImage(id)} resizeMode="contain" />
+      <ImageBackground rarity={rarity}>
+        <ItemImage source={getItemImage(id)} resizeMode="contain" />
+      </ImageBackground>
 
       <ItemName>{name}</ItemName>
 
@@ -44,25 +46,8 @@ export const ItemCard = ({
   );
 };
 
-const getRarityColor = (rarity: ItemRarity) => {
-  switch (rarity) {
-    case "common":
-      return "#C0C0C0";
-    case "rare":
-      return "#3C79E6";
-    case "epic":
-      return "#B84AF9";
-    case "legendary":
-      return "#FFB600";
-    case "uber":
-      return "#FF4141";
-    default:
-      return "#C0C0C0";
-  }
-};
-
 const Container = styled.View(({ theme }) => ({
-  backgroundColor: "#fff",
+  backgroundColor: theme.colors.voidpet.basic.background,
   padding: 16,
   borderRadius: 12,
   width: 320,
@@ -71,8 +56,8 @@ const Container = styled.View(({ theme }) => ({
 
 const RarityLabel = styled.Text<{ rarity: ItemRarity }>(
   ({ rarity, theme }) => ({
-    backgroundColor: getRarityColor(rarity),
-    color: theme.colors.text,
+    backgroundColor: theme.colors.voidpet.rarity[rarity].banner,
+    color: theme.colors.voidpet.basic.lightText,
     paddingVertical: 4,
     paddingHorizontal: 12,
     borderRadius: 8,
@@ -84,13 +69,13 @@ const RarityLabel = styled.Text<{ rarity: ItemRarity }>(
 const ItemName = styled.Text(({ theme }) => ({
   fontSize: 18,
   fontWeight: "700",
-  color: theme.colors.text,
+  color: theme.colors.voidpet.basic.text,
   marginBottom: 4,
 }));
 
 const Description = styled.Text(({ theme }) => ({
   fontSize: 14,
-  color: theme.colors.text,
+  color: theme.colors.voidpet.basic.text,
   textAlign: "center",
   marginBottom: 8,
 }));
@@ -101,8 +86,17 @@ const StatsContainer = styled.View({
 
 const StatText = styled.Text(({ theme }) => ({
   fontSize: 14,
-  color: theme.colors.text,
+  color: theme.colors.voidpet.basic.text,
 }));
+
+const ImageBackground = styled.View<{ rarity: ItemRarity }>(
+  ({ rarity, theme }) => ({
+    width: 64,
+    height: 64,
+    marginBottom: 8,
+    backgroundColor: theme.colors.voidpet.rarity[rarity].itemBackground,
+  }),
+);
 
 const ItemImage = styled.Image(() => ({
   width: 64,
