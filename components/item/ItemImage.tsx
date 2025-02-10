@@ -16,7 +16,6 @@ const ImageBackground = styled.View<{ rarity: ItemRarity }>(
   ({ rarity, theme }) => ({
     width: 64,
     height: 64,
-    marginBottom: 8,
     backgroundColor: theme.colors.voidpet.rarity[rarity].itemBackground,
   }),
 );
@@ -24,5 +23,4 @@ const ImageBackground = styled.View<{ rarity: ItemRarity }>(
 const StyledImage = styled.Image(() => ({
   width: 64,
   height: 64,
-  marginBottom: 8,
 }));
