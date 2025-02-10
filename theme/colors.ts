@@ -31,7 +31,7 @@ const voidpetRarityColors: Record<
 
 const voidpetBasicColors = {
   background: "#fff",
-  text: "#000",
+  text: "#1B1515",
   lightText: "#fff",
   separator: "#ECE9E9",
 };
