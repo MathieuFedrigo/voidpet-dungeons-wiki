@@ -2,6 +2,7 @@
 
 import { ImageSourcePropType } from "react-native";
 
+import { getItem } from "./item.config";
 import { ItemId, ItemRarity } from "./item.type";
 
 const ITEMS_IMAGES: Record<ItemId, ImageSourcePropType> = {
@@ -134,5 +135,4 @@ const ITEMS_WAVE_BG: Record<ItemRarity, ImageSourcePropType> = {
   uber: require("../../assets/images/itemWaveBg/assets_imgs_itemwavebgs_uber.png"),
 };
 
-export const getItemWaveBg = (itemRarity: ItemRarity) =>
-  ITEMS_WAVE_BG[itemRarity];
+export const getItemWaveBg = (id: ItemId) => ITEMS_WAVE_BG[getItem(id).rarity];
