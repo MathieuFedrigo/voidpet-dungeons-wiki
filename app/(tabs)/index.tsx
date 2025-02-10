@@ -23,11 +23,11 @@ export default function HomeScreen() {
         <ThemedText type="subtitle">TODO:</ThemedText>
         <ThemedText>
           {`- Items
-  - Add All Items page
+  - ✅ Add All Items page
+  - Add filters to All Items page
   - Add Specific Item page
     - Add "Drops from" section
     - Add level stats simulator
-  - Add filters to All Items page
 
 - Bosses
   - Add All Bosses page
