@@ -758,3 +758,4 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
     slot: "hat",
   },
 };
+export const getItem = (id: ItemId) => ITEMS_CONFIG[id];
