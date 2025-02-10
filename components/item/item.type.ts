@@ -1,14 +1,23 @@
-export type ItemStats = {
-  attack?: number;
-  defense?: number;
-  speed?: number;
-  stamina?: number;
-  crit?: number;
-};
+export const ITEM_STATS = [
+  "attack",
+  "defense",
+  "speed",
+  "stamina",
+  "crit",
+] as const;
+export type ItemStats = { [key in (typeof ITEM_STATS)[number]]?: number };
 
-export type ItemRarity = "common" | "rare" | "epic" | "legendary" | "uber";
+export const ITEM_RARITIES = [
+  "common",
+  "rare",
+  "epic",
+  "legendary",
+  "uber",
+] as const;
+export type ItemRarity = (typeof ITEM_RARITIES)[number];
 
-export type ItemSlot = "hat" | "neck" | "trinket";
+export const ITEM_SLOTS = ["hat", "neck", "trinket"] as const;
+export type ItemSlot = (typeof ITEM_SLOTS)[number];
 
 export type Item = {
   id: ItemId;
