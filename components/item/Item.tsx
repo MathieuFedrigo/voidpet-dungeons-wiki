@@ -50,24 +50,21 @@ export const ItemCard = ({
 const Container = styled.View(({ theme }) => ({
   backgroundColor: theme.colors.voidpet.basic.light,
   width: 420,
-  alignItems: "center",
   borderTopLeftRadius: 32,
   borderBottomRightRadius: 32,
 }));
 
 const Content = styled.View(() => ({
-  width: "100%",
   padding: 16,
 }));
 
 const ItemInfo = styled.View(() => ({
-  width: "100%",
   flexDirection: "row",
 }));
 
 const ItemFullDescription = styled.View(() => ({
-  width: "100%",
   marginLeft: 16,
+  flex: 1,
 }));
 
 const RarityLabel = styled.Text<{ rarity: ItemRarity }>(
@@ -92,7 +89,6 @@ const ItemName = styled.Text(({ theme }) => ({
 const Description = styled.Text(({ theme }) => ({
   fontSize: 14,
   color: theme.colors.voidpet.basic.dark,
-  textAlign: "center",
 }));
 
 const Separator = styled.View(({ theme }) => ({
