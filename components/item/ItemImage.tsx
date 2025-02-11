@@ -7,8 +7,8 @@ import { getItemImage, getItemSlot, getItemWaveBg } from "./items.images";
 export const ItemImage = ({ id }: { id: Item["id"] }) => {
   return (
     <ImageBackground rarity={ITEMS_CONFIG[id].rarity}>
-      <StyledImage source={getItemImage(id)} resizeMode="contain" />
       <WaveBgImage source={getItemWaveBg(id)} resizeMode="stretch" />
+      <StyledImage source={getItemImage(id)} resizeMode="cover" />
       <BottomBlackBar />
       <ItemSlotCircle>
         <ItemSlotColor rarity={ITEMS_CONFIG[id].rarity} />
@@ -31,7 +31,7 @@ const ImageBackground = styled.View<{ rarity: ItemRarity }>(
 
 const StyledImage = styled.Image(() => ({
   width: 64,
-  height: 64,
+  height: 48,
 }));
 
 const WaveBgImage = styled.Image(() => ({
