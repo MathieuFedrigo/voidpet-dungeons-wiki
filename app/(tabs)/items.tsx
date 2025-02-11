@@ -58,16 +58,17 @@ export default function ItemsScreen() {
 
   return (
     <Container>
-      <ItemFilters
-        selectedRarities={selectedRarities}
-        selectedSlots={selectedSlots}
-        filterStats={filterStats}
-        toggleRarity={toggleRarity}
-        toggleSlot={toggleSlot}
-        toggleStat={toggleStat}
-      />
-
       <FlatList
+        ListHeaderComponent={
+          <ItemFilters
+            selectedRarities={selectedRarities}
+            selectedSlots={selectedSlots}
+            filterStats={filterStats}
+            toggleRarity={toggleRarity}
+            toggleSlot={toggleSlot}
+            toggleStat={toggleStat}
+          />
+        }
         data={filteredItems}
         renderItem={({ item }) => <ItemById id={item} />}
         ItemSeparatorComponent={Separator}
