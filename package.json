@@ -11,7 +11,7 @@
     "web": "expo start --web",
     "test": "jest --watchAll",
     "test:types": "tsc",
-    "lint": "expo lint"
+    "test:lint": "expo lint"
   },
   "jest": {
     "preset": "jest-expo"
