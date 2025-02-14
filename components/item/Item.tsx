@@ -1,4 +1,5 @@
 import styled from "@emotion/native";
+import { Link } from "expo-router";
 
 import { ITEMS_CONFIG } from "./item.config";
 import { Item, ItemRarity } from "./item.type";
@@ -20,34 +21,36 @@ export const ItemCard = ({
   },
 }: Props) => {
   return (
-    <Container>
-      <RarityLabel rarity={rarity}>{rarity.toUpperCase()} GEAR</RarityLabel>
+    <Link href={`/item/${id}`} asChild>
+      <Container>
+        <RarityLabel rarity={rarity}>{rarity.toUpperCase()} GEAR</RarityLabel>
 
-      <Content>
-        <ItemInfo>
-          <ItemImage id={id} />
+        <Content>
+          <ItemInfo>
+            <ItemImage id={id} />
 
-          <ItemFullDescription>
-            <ItemName>{name.toUpperCase()}</ItemName>
-            {description && <Description>{description}</Description>}
-          </ItemFullDescription>
-        </ItemInfo>
+            <ItemFullDescription>
+              <ItemName>{name.toUpperCase()}</ItemName>
+              {description && <Description>{description}</Description>}
+            </ItemFullDescription>
+          </ItemInfo>
 
-        <Separator />
+          <Separator />
 
-        <StatsContainer>
-          {attack && <StatText>Attack: {attack}</StatText>}
-          {defense && <StatText>Defense: {defense}</StatText>}
-          {speed && <StatText>Speed: {speed}</StatText>}
-          {stamina && <StatText>Stamina: {stamina}</StatText>}
-          {crit && <StatText>Crit Chance: {crit}%</StatText>}
-        </StatsContainer>
-      </Content>
-    </Container>
+          <StatsContainer>
+            {attack && <StatText>Attack: {attack}</StatText>}
+            {defense && <StatText>Defense: {defense}</StatText>}
+            {speed && <StatText>Speed: {speed}</StatText>}
+            {stamina && <StatText>Stamina: {stamina}</StatText>}
+            {crit && <StatText>Crit Chance: {crit}%</StatText>}
+          </StatsContainer>
+        </Content>
+      </Container>
+    </Link>
   );
 };
 
-const Container = styled.View(({ theme }) => ({
+const Container = styled.Pressable(({ theme }) => ({
   backgroundColor: theme.colors.voidpet.basic.light,
   minWidth: 320,
   maxWidth: 420,
