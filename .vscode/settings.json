@@ -3,5 +3,16 @@
     "source.fixAll": "explicit",
     "source.organizeImports": "explicit",
     "source.sortMembers": "explicit"
-  }
+  },
+  "cSpell.words": [
+    "bogar",
+    "Bogar",
+    "harold",
+    "krakoth",
+    "Krakoth",
+    "voidweaver",
+    "Voidweaver",
+    "vulko",
+    "Vulko"
+  ]
 }
