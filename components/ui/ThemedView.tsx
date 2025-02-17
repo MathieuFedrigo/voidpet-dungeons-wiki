@@ -1,11 +1,12 @@
-import { View, type ViewProps } from "react-native";
-
-import { useThemeColor } from "@/hooks/useThemeColor";
+import styled from "@emotion/native";
+import { type ViewProps } from "react-native";
 
 export type ThemedViewProps = ViewProps;
 
 export function ThemedView({ style, ...otherProps }: ThemedViewProps) {
-  const backgroundColor = useThemeColor("background");
-
-  return <View style={[{ backgroundColor }, style]} {...otherProps} />;
+  return <StyledView style={style} {...otherProps} />;
 }
+
+const StyledView = styled.View(({ theme }) => ({
+  backgroundColor: theme.colors.background,
+}));
