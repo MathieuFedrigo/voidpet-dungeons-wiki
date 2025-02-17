@@ -1,6 +1,9 @@
+import { ItemId } from "../item/item.type";
+
 export type Boss = {
   id: BossId;
   name: string;
+  drops: ItemId[];
 };
 
 export const BOSS_IDS = [
