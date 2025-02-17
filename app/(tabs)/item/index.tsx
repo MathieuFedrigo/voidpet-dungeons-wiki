@@ -82,5 +82,5 @@ const Separator = styled.View({ height: 16 });
 
 const Container = styled(SafeAreaView)({
   flex: 1,
-  marginTop: 12,
+  padding: 12,
 });

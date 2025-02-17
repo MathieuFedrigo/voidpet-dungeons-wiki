@@ -17,5 +17,5 @@ export default function SpecificItemScreen() {
 
 const Container = styled(SafeAreaView)({
   flex: 1,
-  marginTop: 12,
+  padding: 12,
 });

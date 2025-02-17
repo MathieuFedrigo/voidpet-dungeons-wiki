@@ -27,7 +27,7 @@ export const ItemFilters = ({
   toggleStat,
 }: ItemFiltersProps) => {
   return (
-    <>
+    <Container>
       <FilterSection>
         <FilterTitle>Filter by Rarity</FilterTitle>
         <FilterRow>
@@ -81,13 +81,18 @@ export const ItemFilters = ({
           })}
         </FilterRow>
       </FilterSection>
-    </>
+    </Container>
   );
 };
 
+const Container = styled.Pressable({
+  alignSelf: "center",
+  width: "100%",
+  maxWidth: 420,
+});
+
 const FilterSection = styled.View({
   marginBottom: 10,
-  paddingHorizontal: 10,
 });
 
 const FilterTitle = styled.Text(({ theme }) => ({

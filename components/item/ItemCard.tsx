@@ -63,6 +63,8 @@ const Container = styled.Pressable(({ theme }) => ({
   maxWidth: 420,
   borderTopLeftRadius: 32,
   borderBottomRightRadius: 32,
+  alignSelf: "center",
+  width: "100%",
 }));
 
 const Content = styled.View(() => ({
