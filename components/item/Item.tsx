@@ -5,11 +5,15 @@ import { ITEMS_CONFIG } from "./item.config";
 import { Item, ItemRarity } from "./item.type";
 import { ItemImage } from "./ItemImage";
 
-type Props = { item: Item };
+type Props = { item: Item; disabled?: boolean };
 
-export const ItemById = ({ id }: { id: Item["id"] }) => (
-  <ItemCard item={ITEMS_CONFIG[id]} />
-);
+export const ItemById = ({
+  id,
+  disabled,
+}: {
+  id: Item["id"];
+  disabled?: boolean;
+}) => <ItemCard item={ITEMS_CONFIG[id]} disabled={disabled} />;
 
 export const ItemCard = ({
   item: {
@@ -19,33 +23,36 @@ export const ItemCard = ({
     baseStats: { attack, crit, defense, speed, stamina },
     id,
   },
+  disabled = false,
 }: Props) => {
-  return (
+  const content = (
+    <Container disabled={disabled}>
+      <RarityLabel rarity={rarity}>{rarity.toUpperCase()} GEAR</RarityLabel>
+      <Content>
+        <ItemInfo>
+          <ItemImage id={id} />
+          <ItemFullDescription>
+            <ItemName>{name.toUpperCase()}</ItemName>
+            {description && <Description>{description}</Description>}
+          </ItemFullDescription>
+        </ItemInfo>
+        <Separator />
+        <StatsContainer>
+          {attack && <StatText>Attack: {attack}</StatText>}
+          {defense && <StatText>Defense: {defense}</StatText>}
+          {speed && <StatText>Speed: {speed}</StatText>}
+          {stamina && <StatText>Stamina: {stamina}</StatText>}
+          {crit && <StatText>Crit Chance: {crit}%</StatText>}
+        </StatsContainer>
+      </Content>
+    </Container>
+  );
+
+  return disabled ? (
+    content
+  ) : (
     <Link href={`/item/${id}`} asChild>
-      <Container>
-        <RarityLabel rarity={rarity}>{rarity.toUpperCase()} GEAR</RarityLabel>
-
-        <Content>
-          <ItemInfo>
-            <ItemImage id={id} />
-
-            <ItemFullDescription>
-              <ItemName>{name.toUpperCase()}</ItemName>
-              {description && <Description>{description}</Description>}
-            </ItemFullDescription>
-          </ItemInfo>
-
-          <Separator />
-
-          <StatsContainer>
-            {attack && <StatText>Attack: {attack}</StatText>}
-            {defense && <StatText>Defense: {defense}</StatText>}
-            {speed && <StatText>Speed: {speed}</StatText>}
-            {stamina && <StatText>Stamina: {stamina}</StatText>}
-            {crit && <StatText>Crit Chance: {crit}%</StatText>}
-          </StatsContainer>
-        </Content>
-      </Container>
+      {content}
     </Link>
   );
 };
