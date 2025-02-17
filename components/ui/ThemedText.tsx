@@ -5,25 +5,23 @@ export type ThemedTextProps = TextProps & {
   type?: "default" | "title" | "defaultSemiBold" | "subtitle" | "link";
 };
 
-export function ThemedText({
+export const ThemedText = ({
   style,
   type = "default",
   ...rest
-}: ThemedTextProps) {
-  return (
-    <StyledText
-      style={[
-        type === "default" ? styles.default : undefined,
-        type === "title" ? styles.title : undefined,
-        type === "defaultSemiBold" ? styles.defaultSemiBold : undefined,
-        type === "subtitle" ? styles.subtitle : undefined,
-        type === "link" ? styles.link : undefined,
-        style,
-      ]}
-      {...rest}
-    />
-  );
-}
+}: ThemedTextProps) => (
+  <StyledText
+    style={[
+      type === "default" ? styles.default : undefined,
+      type === "title" ? styles.title : undefined,
+      type === "defaultSemiBold" ? styles.defaultSemiBold : undefined,
+      type === "subtitle" ? styles.subtitle : undefined,
+      type === "link" ? styles.link : undefined,
+      style,
+    ]}
+    {...rest}
+  />
+);
 
 const StyledText = styled.Text(({ theme }) => ({
   color: theme.colors.text,
