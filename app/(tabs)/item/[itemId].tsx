@@ -3,8 +3,8 @@ import styled from "@emotion/native";
 import { useLocalSearchParams } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import { ItemById } from "@/components/item/Item";
 import { ItemId } from "@/components/item/item.type";
+import { ItemById } from "@/components/item/ItemCard";
 
 export default function SpecificItemScreen() {
   const { itemId } = useLocalSearchParams<{ itemId: ItemId }>();

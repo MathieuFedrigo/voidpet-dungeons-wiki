@@ -4,7 +4,6 @@ import { useState } from "react";
 import { FlatList } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import { ItemById } from "@/components/item/Item";
 import { ITEMS_CONFIG } from "@/components/item/item.config";
 import {
   ITEM_IDS,
@@ -12,6 +11,7 @@ import {
   ItemSlot,
   ItemStats,
 } from "@/components/item/item.type";
+import { ItemById } from "@/components/item/ItemCard";
 import { ItemFilters } from "@/components/item/ItemFilters";
 
 export default function ItemsScreen() {
