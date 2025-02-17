@@ -3,13 +3,14 @@ import styled from "@emotion/native";
 import { useLocalSearchParams } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import { ThemedText } from "@/components/ui/ThemedText";
+import { ItemById } from "@/components/item/Item";
+import { ItemId } from "@/components/item/item.type";
 
 export default function SpecificItemScreen() {
-  const { itemId } = useLocalSearchParams();
+  const { itemId } = useLocalSearchParams<{ itemId: ItemId }>();
   return (
     <Container>
-      <ThemedText>Item ID: {itemId}</ThemedText>
+      <ItemById id={itemId} disabled />
     </Container>
   );
 }
