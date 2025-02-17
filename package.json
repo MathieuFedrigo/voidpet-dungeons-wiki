@@ -12,7 +12,8 @@
     "test:jest": "jest --watchAll",
     "test:types": "tsc",
     "test:lint": "expo lint",
-    "test": "npm run test:types && npm run test:lint && npm run test:jest"
+    "test": "npm run test:types && npm run test:lint && jest --passWithNoTests",
+    "lint": "eslint ."
   },
   "jest": {
     "preset": "jest-expo"
