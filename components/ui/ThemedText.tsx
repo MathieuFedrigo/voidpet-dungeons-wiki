@@ -1,6 +1,5 @@
-import { StyleSheet, Text, type TextProps } from "react-native";
-
-import { useThemeColor } from "@/hooks/useThemeColor";
+import styled from "@emotion/native";
+import { StyleSheet, type TextProps } from "react-native";
 
 export type ThemedTextProps = TextProps & {
   type?: "default" | "title" | "defaultSemiBold" | "subtitle" | "link";
@@ -11,12 +10,9 @@ export function ThemedText({
   type = "default",
   ...rest
 }: ThemedTextProps) {
-  const color = useThemeColor("text");
-
   return (
-    <Text
+    <StyledText
       style={[
-        { color },
         type === "default" ? styles.default : undefined,
         type === "title" ? styles.title : undefined,
         type === "defaultSemiBold" ? styles.defaultSemiBold : undefined,
@@ -28,6 +24,10 @@ export function ThemedText({
     />
   );
 }
+
+const StyledText = styled.Text(({ theme }) => ({
+  color: theme.colors.text,
+}));
 
 const styles = StyleSheet.create({
   default: {
