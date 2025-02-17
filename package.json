@@ -11,7 +11,8 @@
     "web": "expo start --web",
     "test:jest": "jest --watchAll",
     "test:types": "tsc",
-    "test:lint": "expo lint"
+    "test:lint": "expo lint",
+    "test": "npm run test:types && npm run test:lint && npm run test:jest"
   },
   "jest": {
     "preset": "jest-expo"
