@@ -26,6 +26,7 @@ export default function HomeScreen() {
   - ✅ Add All Items page
   - ✅ Add filters to All Items page
     - Make them beautiful
+    - Add sorting
   - ✅ Add Specific Item page
     - Add "Drops from" section
     - Add level stats simulator
