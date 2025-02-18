@@ -15,6 +15,10 @@ export const BOSS_CONFIG: Record<BossId, Boss> = {
       "cowboyHat",
       "nailBuffers",
       "leatherJournal",
+      "diamondCollar",
+      "seaDolphinFloat",
+      "shitakeMushroom",
+      "baseBallCap",
     ],
   },
   deathQuack: {
@@ -31,6 +35,10 @@ export const BOSS_CONFIG: Record<BossId, Boss> = {
       "redHat",
       "espressoShot",
       "fluffyPillow",
+      "blueRibbonScarf",
+      "maroonRibbonScarf",
+      "backwardsCap",
+      "beigeBeret",
     ],
   },
   krakoth: {
@@ -47,6 +55,10 @@ export const BOSS_CONFIG: Record<BossId, Boss> = {
       "redHat",
       "weightedBlanket",
       "espressoShot",
+      "greenRibbonScarf",
+      "platinumDiamondNecklace",
+      "shitakeMushroom",
+      "deathCapMushroom",
     ],
   },
   shift: {
@@ -63,6 +75,10 @@ export const BOSS_CONFIG: Record<BossId, Boss> = {
       "hibiscusFlower",
       "leatherJournal",
       "softDumbbell",
+      "redRibbonScarf",
+      "blueButterflyChain",
+      "deathCapMushroom",
+      "tropicalWreath",
     ],
   },
   flint: {
@@ -79,6 +95,10 @@ export const BOSS_CONFIG: Record<BossId, Boss> = {
       "cowboyHat",
       "nailBuffers",
       "leatherJournal",
+      "diamondCollar",
+      "seaDolphinFloat",
+      "shitakeMushroom",
+      "baseBallCap",
     ],
   },
   vulko: {
@@ -95,6 +115,10 @@ export const BOSS_CONFIG: Record<BossId, Boss> = {
       "hibiscusFlower",
       "stressBall",
       "softDumbbell",
+      "greenRibbonScarf",
+      "platinumDiamondNecklace",
+      "batHeadband",
+      "tropicalWreath",
     ],
   },
   voidweaver: {
@@ -111,6 +135,10 @@ export const BOSS_CONFIG: Record<BossId, Boss> = {
       "spiderHat",
       "lycheeCandle",
       "stressBall",
+      "greenRibbonScarf",
+      "seaDolphinFloat",
+      "shitakeMushroom",
+      "rubyHairBow",
     ],
   },
   harold: {
@@ -127,6 +155,10 @@ export const BOSS_CONFIG: Record<BossId, Boss> = {
       "bluePalmCap",
       "nailBuffers",
       "fluffyPillow",
+      "diamondCollar",
+      "lavenderRibbonScarf",
+      "batHeadband",
+      "baseBallCap",
     ],
   },
   quasar: {
@@ -143,6 +175,10 @@ export const BOSS_CONFIG: Record<BossId, Boss> = {
       "peonyWreath",
       "yogaMat",
       "fuzzyMittens",
+      "blueRibbonScarf",
+      "yellowRibbonScarf",
+      "beeAntennae",
+      "cherryBlossomCrown",
     ],
   },
   breakfastClub: {
@@ -159,6 +195,10 @@ export const BOSS_CONFIG: Record<BossId, Boss> = {
       "spiderHat",
       "weightedBlanket",
       "fuzzyMittens",
+      "yellowRibbonScarf",
+      "lavenderRibbonScarf",
+      "rubyHairBow",
+      "cherryBlossomCrown",
     ],
   },
   galax: {
@@ -175,7 +215,12 @@ export const BOSS_CONFIG: Record<BossId, Boss> = {
       "yellowPalmCap",
       "lycheeCandle",
       "yogaMat",
+      "redRibbonScarf",
+      "blueButterflyChain",
+      "beeAntennae",
+      "deathCapMushroom",
     ],
   },
 };
+
 export const getBoss = (id: BossId) => BOSS_CONFIG[id];
