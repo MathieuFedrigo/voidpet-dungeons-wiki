@@ -80,7 +80,8 @@ export default function ItemsScreen() {
 
 const Separator = styled.View({ height: 16 });
 
-const Container = styled(SafeAreaView)({
+const Container = styled(SafeAreaView)(({ theme }) => ({
   flex: 1,
   padding: 12,
-});
+  backgroundColor: theme.colors.voidpet.basic.itemBackground,
+}));

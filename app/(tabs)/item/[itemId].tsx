@@ -15,7 +15,8 @@ export default function SpecificItemScreen() {
   );
 }
 
-const Container = styled(SafeAreaView)({
+const Container = styled(SafeAreaView)(({ theme }) => ({
   flex: 1,
   padding: 12,
-});
+  backgroundColor: theme.colors.voidpet.basic.itemBackground,
+}));
