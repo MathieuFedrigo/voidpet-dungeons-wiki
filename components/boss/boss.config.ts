@@ -1,4 +1,5 @@
-import { Boss, BossId } from "./boss.type";
+import { ItemId } from "../item/item.type";
+import { Boss, BOSS_IDS, BossId } from "./boss.type";
 
 export const BOSS_CONFIG: Record<BossId, Boss> = {
   bogar: {
@@ -334,3 +335,6 @@ export const BOSS_CONFIG: Record<BossId, Boss> = {
 };
 
 export const getBoss = (id: BossId) => BOSS_CONFIG[id];
+
+export const getBossIdsThatDropItem = (itemId: ItemId): BossId[] =>
+  BOSS_IDS.filter((id) => getBoss(id).drops.includes(itemId));
