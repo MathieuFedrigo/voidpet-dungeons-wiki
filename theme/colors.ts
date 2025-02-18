@@ -34,6 +34,7 @@ const voidpetBasicColors = {
   dark: "#1B1515",
   lightText: "#fff",
   separator: "#ECE9E9",
+  itemBackground: "#BD58D9",
 };
 
 export const lightColors = {
