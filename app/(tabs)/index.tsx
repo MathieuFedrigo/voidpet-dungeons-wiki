@@ -36,6 +36,12 @@ export default function HomeScreen() {
   - Add Specific Boss page
     - Add "Boss Drops" section
   - Add filters to All Bosses page
+- Voidpets
+  - Add All Voidpets page
+  - Add Specific Voidpets page
+    - Add level stats simulator
+  - Add filters to All Voidpets page
+  - Add Sorting to All Voidpets page
 `}
         </ThemedText>
       </ThemedView>
