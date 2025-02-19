@@ -49,7 +49,7 @@ export default function ItemsScreen() {
     }
     if (
       filterStats.length &&
-      !filterStats.some((stat) => item.baseStats[stat])
+      !filterStats.every((stat) => item.baseStats[stat])
     ) {
       return false;
     }
