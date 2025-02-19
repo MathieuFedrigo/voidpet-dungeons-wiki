@@ -34,6 +34,15 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
+      ],
+      [
+        "expo-custom-assets",
+        {
+          // Add asset directory paths, the plugin copies the files in the given paths to the app bundle folder named Assets
+          "assetsPaths": ["./assets/rive"]
+          // if you want custom assets directory name use this prop (default: "Assets")
+          // "assetsDirName": "testName"
+        }
       ]
     ],
     "experiments": {
