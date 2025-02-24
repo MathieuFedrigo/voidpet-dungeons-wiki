@@ -1,4 +1,5 @@
 import { Image, StyleSheet } from "react-native";
+import Rive from "rive-react-native";
 
 import ParallaxScrollView from "@/components/ui/ParallaxScrollView";
 import { ThemedText } from "@/components/ui/ThemedText";
@@ -19,6 +20,7 @@ export default function HomeScreen() {
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Welcome!</ThemedText>
       </ThemedView>
+      <Rive resourceName="bogar" style={{ width: 300, height: 300 }} />
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">TODO:</ThemedText>
         <ThemedText>
