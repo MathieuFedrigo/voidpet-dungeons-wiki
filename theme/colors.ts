@@ -35,6 +35,10 @@ const voidpetBasicColors = {
   lightText: "#fff",
   separator: "#ECE9E9",
   itemBackground: "#BD58D9",
+  bossBackground: "#5362D4",
+  bossCardBackground: "#5969E3",
+  bossCardBorder: "#5665D6",
+  bossText: "#BBC4FA",
 };
 
 export const lightColors = {
