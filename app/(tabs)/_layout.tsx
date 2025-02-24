@@ -62,6 +62,18 @@ export default function TabLayout() {
           ),
         }}
       />
+      <Tabs.Screen
+        name="item/[itemId]"
+        options={{
+          href: null,
+        }}
+      />
+      <Tabs.Screen
+        name="boss/[bossId]"
+        options={{
+          href: null,
+        }}
+      />
     </Tabs>
   );
 }
