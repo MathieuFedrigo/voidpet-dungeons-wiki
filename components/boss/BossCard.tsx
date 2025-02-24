@@ -50,7 +50,7 @@ const BossCard = ({ boss, disabled = false }: BossCardProps) => {
   );
 };
 
-const CardContainer = styled.View(({ theme }) => ({
+const CardContainer = styled.Pressable(({ theme }) => ({
   backgroundColor: theme.colors.voidpet.basic.bossCardBackground,
   minWidth: 320,
   maxWidth: 420,
