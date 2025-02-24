@@ -1,7 +1,6 @@
 import { Image, StyleSheet } from "react-native";
 
 import ParallaxScrollView from "@/components/ui/ParallaxScrollView";
-import { RiveView } from "@/components/ui/RiveView";
 import { ThemedText } from "@/components/ui/ThemedText";
 import { ThemedView } from "@/components/ui/ThemedView";
 
@@ -20,7 +19,6 @@ export default function HomeScreen() {
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Welcome!</ThemedText>
       </ThemedView>
-      <RiveView resourceName="deathQuack" size={300} />
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">TODO:</ThemedText>
         <ThemedText>
