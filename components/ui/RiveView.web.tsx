@@ -2,10 +2,12 @@
 import Rive from "@rive-app/react-canvas";
 
 import { getRiveResource } from "../boss/boss.rive";
+import { RiveId } from "../boss/boss.type";
 
-export const RiveView = () => (
+type Props = { resourceName: RiveId };
+export const RiveView = ({ resourceName }: Props) => (
   <Rive
-    src={getRiveResource("bogar")}
+    src={getRiveResource(resourceName)}
     stateMachines="idle"
     style={{ width: 300, height: 300 }}
   />
