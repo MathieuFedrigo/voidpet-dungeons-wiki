@@ -9,7 +9,7 @@ export type RiveId =
 
 export const RIVE_RESOURCES: Record<RiveId, string> = {
   bogar: require("../../assets/rive/bogar.riv"),
-  deathQuack: require("../../assets/rive/death_quack.riv"),
+  deathQuack: require("../../assets/rive/deathQuack.riv"),
   krakoth: require("../../assets/rive/krakoth.riv"),
   shift: require("../../assets/rive/shift.riv"),
   flint: require("../../assets/rive/flint.riv"),
