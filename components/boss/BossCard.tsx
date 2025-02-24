@@ -22,7 +22,7 @@ const BossCard = ({ boss, disabled = false }: BossCardProps) => {
   const { id, name, shortDescription } = boss;
 
   const content = (
-    <CardContainer>
+    <CardContainer disabled={disabled}>
       <ImageContainer>
         <RiveContainer>
           <RiveView
