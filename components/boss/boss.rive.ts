@@ -1,11 +1,5 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
-import { BossId } from "./boss.type";
-
-export type RiveId =
-  | Exclude<BossId, "breakfastClub">
-  | "crackle"
-  | "pop"
-  | "snap";
+import { RiveId } from "./boss.type";
 
 export const RIVE_RESOURCES: Record<RiveId, string> = {
   bogar: require("../../assets/rive/bogar.riv"),

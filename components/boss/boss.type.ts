@@ -21,3 +21,9 @@ export const BOSS_IDS = [
 ] as const;
 
 export type BossId = (typeof BOSS_IDS)[number];
+
+export type RiveId =
+  | Exclude<BossId, "breakfastClub">
+  | "crackle"
+  | "pop"
+  | "snap";
