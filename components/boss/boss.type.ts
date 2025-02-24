@@ -4,6 +4,7 @@ export type Boss = {
   id: BossId;
   name: string;
   drops: ItemId[];
+  shortDescription: string;
 };
 
 export const BOSS_IDS = [

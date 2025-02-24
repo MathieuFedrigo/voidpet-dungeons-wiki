@@ -5,6 +5,7 @@ export const BOSS_CONFIG: Record<BossId, Boss> = {
   bogar: {
     id: "bogar",
     name: "Bogar",
+    shortDescription: "",
     drops: [
       "rubyCollar",
       "sorrowScarf",
@@ -35,6 +36,7 @@ export const BOSS_CONFIG: Record<BossId, Boss> = {
   deathQuack: {
     id: "deathQuack",
     name: "Death Quack",
+    shortDescription: "",
     drops: [
       "bejeweledPinkScarf",
       "mermaidScarf",
@@ -65,6 +67,7 @@ export const BOSS_CONFIG: Record<BossId, Boss> = {
   krakoth: {
     id: "krakoth",
     name: "Krakoth",
+    shortDescription: "Very dangerous sideways worm.",
     drops: [
       "wizardCape",
       "blueTie",
@@ -95,6 +98,7 @@ export const BOSS_CONFIG: Record<BossId, Boss> = {
   shift: {
     id: "shift",
     name: "Shift",
+    shortDescription: "Shift changes the rules of battle.",
     drops: [
       "watermelonSpikedCollar",
       "serpentScarf",
@@ -125,6 +129,7 @@ export const BOSS_CONFIG: Record<BossId, Boss> = {
   flint: {
     id: "flint",
     name: "Flint",
+    shortDescription: "",
     drops: [
       "rubyCollar",
       "sorrowScarf",
@@ -155,6 +160,8 @@ export const BOSS_CONFIG: Record<BossId, Boss> = {
   vulko: {
     id: "vulko",
     name: "Vulko",
+    shortDescription:
+      "Vulko intends on permanently borrowing your voidpets health.",
     drops: [
       "enviousScarf",
       "cakeScarf",
@@ -185,6 +192,7 @@ export const BOSS_CONFIG: Record<BossId, Boss> = {
   voidweaver: {
     id: "voidweaver",
     name: "Voidweaver",
+    shortDescription: "Big spider. Hopefully there is only one.",
     drops: [
       "lemonDolphinFloat",
       "spiderNecklace",
@@ -215,6 +223,8 @@ export const BOSS_CONFIG: Record<BossId, Boss> = {
   harold: {
     id: "harold",
     name: "Harold",
+    shortDescription:
+      "Harold may lack intelligence, but he more than makes up for it with his strength.",
     drops: [
       "bubblegumScarf",
       "jellyfishScarf",
@@ -245,6 +255,7 @@ export const BOSS_CONFIG: Record<BossId, Boss> = {
   quasar: {
     id: "quasar",
     name: "Quasar",
+    shortDescription: "",
     drops: [
       "princesCollar",
       "rubberRingDonut",
@@ -275,6 +286,7 @@ export const BOSS_CONFIG: Record<BossId, Boss> = {
   breakfastClub: {
     id: "breakfastClub",
     name: "Breakfast Club",
+    shortDescription: "",
     drops: [
       "paisleyCowboyScarf",
       "checkeredScarf",
@@ -305,6 +317,7 @@ export const BOSS_CONFIG: Record<BossId, Boss> = {
   galax: {
     id: "galax",
     name: "Galax",
+    shortDescription: "Galax will keep powering up unless you stop him.",
     drops: [
       "anxietyScarf",
       "angryScarf",
