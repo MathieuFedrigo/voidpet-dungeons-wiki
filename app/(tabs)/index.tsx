@@ -20,7 +20,7 @@ export default function HomeScreen() {
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Welcome!</ThemedText>
       </ThemedView>
-      <RiveView resourceName="deathQuack" />
+      <RiveView resourceName="deathQuack" size={300} />
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">TODO:</ThemedText>
         <ThemedText>
