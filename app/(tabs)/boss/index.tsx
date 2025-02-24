@@ -5,6 +5,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 import { BOSS_IDS } from "@/components/boss/boss.type";
 import { BossCardById } from "@/components/boss/BossCard";
+import { Spacer } from "@/components/ui/Spacer";
 
 export default function BossesScreen() {
   return (
@@ -14,6 +15,7 @@ export default function BossesScreen() {
         renderItem={({ item }) => <BossCardById id={item} />}
         ItemSeparatorComponent={Separator}
         keyExtractor={(item) => item}
+        ListFooterComponent={<Spacer vertical={64} />}
       />
     </Container>
   );

@@ -13,6 +13,7 @@ import {
 } from "@/components/item/item.type";
 import { ItemById } from "@/components/item/ItemCard";
 import { ItemFilters } from "@/components/item/ItemFilters";
+import { Spacer } from "@/components/ui/Spacer";
 
 export default function ItemsScreen() {
   const [selectedRarities, setSelectedRarities] = useState<ItemRarity[]>([]);
@@ -73,6 +74,7 @@ export default function ItemsScreen() {
         renderItem={({ item }) => <ItemById id={item} />}
         ItemSeparatorComponent={Separator}
         keyExtractor={(item) => item}
+        ListFooterComponent={<Spacer vertical={64} />}
       />
     </Container>
   );
