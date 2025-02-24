@@ -37,7 +37,7 @@ const voidpetBasicColors = {
   itemBackground: "#BD58D9",
   bossBackground: "#5362D4",
   bossCardBackground: "#5969E3",
-  bossCardBorder: "#5665D6",
+  bossCardBorder: "#7281F6",
   bossText: "#BBC4FA",
 };
 
