@@ -24,16 +24,19 @@ interface RarityFilterProps {
   selectedRarities: ItemRarity[];
   toggleRarity: (rarity: ItemRarity) => void;
   baseRarities?: ItemRarity[];
+  title: string;
 }
 
 interface SlotFilterProps {
   selectedSlots: ItemSlot[];
   toggleSlot: (slot: ItemSlot) => void;
+  title: string;
 }
 
 interface StatFilterProps {
   selectedStats: (keyof ItemStats)[];
   toggleStat: (stat: keyof ItemStats) => void;
+  title: string;
 }
 
 export const ItemFilters = ({
@@ -50,9 +53,18 @@ export const ItemFilters = ({
         <RaritySelector
           selectedRarities={selectedRarities}
           toggleRarity={toggleRarity}
+          title="Filter by Rarity"
         />
-        <SlotSelector selectedSlots={selectedSlots} toggleSlot={toggleSlot} />
-        <StatSelector selectedStats={selectedStats} toggleStat={toggleStat} />
+        <SlotSelector
+          selectedSlots={selectedSlots}
+          toggleSlot={toggleSlot}
+          title="Filter by Slot"
+        />
+        <StatSelector
+          selectedStats={selectedStats}
+          toggleStat={toggleStat}
+          title="Filter by Stats"
+        />
       </Collapsible>
     </Container>
   );
@@ -62,10 +74,11 @@ export const RaritySelector = ({
   selectedRarities,
   toggleRarity,
   baseRarities = [...ITEM_RARITIES],
+  title,
 }: RarityFilterProps) => {
   return (
     <FilterSection>
-      <FilterTitle>Filter by Rarity</FilterTitle>
+      <FilterTitle>{title}</FilterTitle>
       <FilterRow>
         {baseRarities.map((rarity) => {
           const selected = selectedRarities.includes(rarity);
@@ -87,10 +100,11 @@ export const RaritySelector = ({
 export const SlotSelector = ({
   selectedSlots,
   toggleSlot,
+  title,
 }: SlotFilterProps) => {
   return (
     <FilterSection>
-      <FilterTitle>Filter by Slot</FilterTitle>
+      <FilterTitle>{title}</FilterTitle>
       <FilterRow>
         {ITEM_SLOTS.map((slot) => {
           const selected = selectedSlots.includes(slot);
@@ -112,10 +126,11 @@ export const SlotSelector = ({
 export const StatSelector = ({
   selectedStats,
   toggleStat,
+  title,
 }: StatFilterProps) => {
   return (
     <FilterSection>
-      <FilterTitle>Filter by Stats</FilterTitle>
+      <FilterTitle>{title}</FilterTitle>
       <FilterRow>
         {ITEM_STATS.map((stat) => {
           const selected = selectedStats.includes(stat);
