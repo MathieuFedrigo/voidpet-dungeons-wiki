@@ -12,25 +12,31 @@ import { Spacer } from "@/components/ui/Spacer";
 
 export default function ItemsScreen() {
   const {
-    selectedRarities,
-    selectedSlots,
-    selectedStats,
-    toggleRarity,
-    toggleSlot,
-    toggleStat,
+    selectedRarities: selectedFilterRarities,
+    selectedSlots: selectedFilterSlots,
+    selectedStats: selectedFilterStats,
+    toggleRarity: toggleFilterRarity,
+    toggleSlot: toggleFilterSlot,
+    toggleStat: toggleFilterStat,
   } = useSelectedItemAttributes();
 
   const filteredItems = ITEM_IDS.filter((id) => {
     const item = ITEMS_CONFIG[id];
-    if (selectedRarities.length && !selectedRarities.includes(item.rarity)) {
-      return false;
-    }
-    if (selectedSlots.length && !selectedSlots.includes(item.slot)) {
+    if (
+      selectedFilterRarities.length &&
+      !selectedFilterRarities.includes(item.rarity)
+    ) {
       return false;
     }
     if (
-      selectedStats.length &&
-      !selectedStats.every((stat) => item.baseStats[stat])
+      selectedFilterSlots.length &&
+      !selectedFilterSlots.includes(item.slot)
+    ) {
+      return false;
+    }
+    if (
+      selectedFilterStats.length &&
+      !selectedFilterStats.every((stat) => item.baseStats[stat])
     ) {
       return false;
     }
@@ -42,12 +48,12 @@ export default function ItemsScreen() {
       <FlatList
         ListHeaderComponent={
           <ItemFilters
-            selectedRarities={selectedRarities}
-            selectedSlots={selectedSlots}
-            selectedStats={selectedStats}
-            toggleRarity={toggleRarity}
-            toggleSlot={toggleSlot}
-            toggleStat={toggleStat}
+            selectedRarities={selectedFilterRarities}
+            selectedSlots={selectedFilterSlots}
+            selectedStats={selectedFilterStats}
+            toggleRarity={toggleFilterRarity}
+            toggleSlot={toggleFilterSlot}
+            toggleStat={toggleFilterStat}
           />
         }
         data={filteredItems}
