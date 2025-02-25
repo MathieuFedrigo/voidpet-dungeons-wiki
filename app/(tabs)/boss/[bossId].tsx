@@ -74,7 +74,7 @@ const DropsFromText = styled.Text(({ theme }) => ({
   fontWeight: "600",
 }));
 
-const FilterContainer = styled.Pressable({
+const FilterContainer = styled.View({
   alignSelf: "center",
   width: "100%",
   maxWidth: 420,

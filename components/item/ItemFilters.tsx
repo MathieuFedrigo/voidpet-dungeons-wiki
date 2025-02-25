@@ -122,7 +122,7 @@ export const StatFilter = ({ filterStats, toggleStat }: StatFilterProps) => {
   );
 };
 
-const Container = styled.Pressable({
+const Container = styled.View({
   alignSelf: "center",
   width: "100%",
   maxWidth: 420,
