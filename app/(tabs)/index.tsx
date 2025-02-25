@@ -46,6 +46,15 @@ export default function HomeScreen() {
     - Add level stats simulator
   - Add filters to All Voidpets page
   - Add Sorting to All Voidpets page
+
+- Vivids
+  - Add All Vivids page
+  - Add filters
+
+- Dungeon levels
+  - Add Dungeon levels
+  - Add Specific Dungeon level page
+    - Add level details (stats, advice...)
 `}
         </ThemedText>
       </ThemedView>
