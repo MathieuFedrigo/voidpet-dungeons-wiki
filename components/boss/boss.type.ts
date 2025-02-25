@@ -8,17 +8,17 @@ export type Boss = {
 };
 
 export const BOSS_IDS = [
-  "bogar",
-  "deathQuack",
+  "harold",
+  "galax",
   "krakoth",
-  "shift",
-  "flint",
   "vulko",
   "voidweaver",
-  "harold",
+  "shift",
+  "flint",
+  "deathQuack",
   "quasar",
   "breakfastClub",
-  "galax",
+  "bogar",
 ] as const;
 
 export type BossId = (typeof BOSS_IDS)[number];
