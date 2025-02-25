@@ -9,6 +9,8 @@ import {
   ItemStats,
 } from "@/components/item/item.type";
 
+import { Collapsible } from "../ui/Collapsible";
+
 interface ItemFiltersProps {
   selectedRarities: ItemRarity[];
   selectedSlots: ItemSlot[];
@@ -44,12 +46,14 @@ export const ItemFilters = ({
 }: ItemFiltersProps) => {
   return (
     <Container>
-      <RarityFilter
-        selectedRarities={selectedRarities}
-        toggleRarity={toggleRarity}
-      />
-      <SlotFilter selectedSlots={selectedSlots} toggleSlot={toggleSlot} />
-      <StatFilter filterStats={filterStats} toggleStat={toggleStat} />
+      <Collapsible title="Filters">
+        <RarityFilter
+          selectedRarities={selectedRarities}
+          toggleRarity={toggleRarity}
+        />
+        <SlotFilter selectedSlots={selectedSlots} toggleSlot={toggleSlot} />
+        <StatFilter filterStats={filterStats} toggleStat={toggleStat} />
+      </Collapsible>
     </Container>
   );
 };
@@ -128,6 +132,7 @@ const Container = styled.View({
   alignSelf: "center",
   width: "100%",
   maxWidth: 420,
+  marginBottom: 16,
 });
 
 const FilterSection = styled.View({
