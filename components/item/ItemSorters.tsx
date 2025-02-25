@@ -6,7 +6,7 @@ import { Collapsible } from "../ui/Collapsible";
 import { StatSelector } from "./ItemSelectors";
 
 interface ItemSortersProps {
-  selectedStat: keyof ItemStats;
+  selectedStat: keyof ItemStats | null;
   toggleStat: (stat: keyof ItemStats) => void;
 }
 
@@ -15,7 +15,7 @@ export const ItemSorters = ({ selectedStat, toggleStat }: ItemSortersProps) => {
     <Container>
       <Collapsible title="Sorting">
         <StatSelector
-          selectedStats={[selectedStat]}
+          selectedStats={selectedStat ? [selectedStat] : []}
           toggleStat={toggleStat}
           title="Sort by Stats"
         />
