@@ -25,21 +25,18 @@ export default function ItemsScreen() {
     if (
       selectedFilterRarities.length &&
       !selectedFilterRarities.includes(item.rarity)
-    ) {
+    )
       return false;
-    }
-    if (
-      selectedFilterSlots.length &&
-      !selectedFilterSlots.includes(item.slot)
-    ) {
+
+    if (selectedFilterSlots.length && !selectedFilterSlots.includes(item.slot))
       return false;
-    }
+
     if (
       selectedFilterStats.length &&
       !selectedFilterStats.every((stat) => item.baseStats[stat])
-    ) {
+    )
       return false;
-    }
+
     return true;
   });
 
