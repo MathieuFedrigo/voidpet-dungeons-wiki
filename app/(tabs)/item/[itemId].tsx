@@ -14,9 +14,13 @@ export default function SpecificItemScreen() {
   const { itemId } = useLocalSearchParams<{ itemId: ItemId }>();
   return (
     <Container>
-      <ItemById id={itemId} disabled />
-      <DropsFromText>DROPS FROM:</DropsFromText>
       <FlatList
+        ListHeaderComponent={
+          <>
+            <ItemById id={itemId} disabled />
+            <DropsFromText>DROPS FROM:</DropsFromText>
+          </>
+        }
         data={getBossIdsThatDropItem(itemId)}
         renderItem={({ item }) => <BossCardById id={item} />}
         ItemSeparatorComponent={Separator}
