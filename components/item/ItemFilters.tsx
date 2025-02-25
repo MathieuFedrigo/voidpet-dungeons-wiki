@@ -14,7 +14,7 @@ import { Collapsible } from "../ui/Collapsible";
 interface ItemFiltersProps {
   selectedRarities: ItemRarity[];
   selectedSlots: ItemSlot[];
-  filterStats: (keyof ItemStats)[];
+  selectedStats: (keyof ItemStats)[];
   toggleRarity: (rarity: ItemRarity) => void;
   toggleSlot: (slot: ItemSlot) => void;
   toggleStat: (stat: keyof ItemStats) => void;
@@ -32,14 +32,14 @@ interface SlotFilterProps {
 }
 
 interface StatFilterProps {
-  filterStats: (keyof ItemStats)[];
+  selectedStats: (keyof ItemStats)[];
   toggleStat: (stat: keyof ItemStats) => void;
 }
 
 export const ItemFilters = ({
   selectedRarities,
   selectedSlots,
-  filterStats,
+  selectedStats,
   toggleRarity,
   toggleSlot,
   toggleStat,
@@ -52,7 +52,7 @@ export const ItemFilters = ({
           toggleRarity={toggleRarity}
         />
         <SlotFilter selectedSlots={selectedSlots} toggleSlot={toggleSlot} />
-        <StatFilter filterStats={filterStats} toggleStat={toggleStat} />
+        <StatFilter selectedStats={selectedStats} toggleStat={toggleStat} />
       </Collapsible>
     </Container>
   );
@@ -106,13 +106,13 @@ export const SlotFilter = ({ selectedSlots, toggleSlot }: SlotFilterProps) => {
   );
 };
 
-export const StatFilter = ({ filterStats, toggleStat }: StatFilterProps) => {
+export const StatFilter = ({ selectedStats, toggleStat }: StatFilterProps) => {
   return (
     <FilterSection>
       <FilterTitle>Filter by Stats</FilterTitle>
       <FilterRow>
         {ITEM_STATS.map((stat) => {
-          const selected = filterStats.includes(stat);
+          const selected = selectedStats.includes(stat);
           return (
             <OptionButton
               key={stat}

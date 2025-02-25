@@ -18,7 +18,7 @@ import { Spacer } from "@/components/ui/Spacer";
 export default function ItemsScreen() {
   const [selectedRarities, setSelectedRarities] = useState<ItemRarity[]>([]);
   const [selectedSlots, setSelectedSlots] = useState<ItemSlot[]>([]);
-  const [filterStats, setFilterStats] = useState<(keyof ItemStats)[]>([]);
+  const [selectedStats, setSelectedStats] = useState<(keyof ItemStats)[]>([]);
 
   const toggleRarity = (rarity: ItemRarity) => {
     setSelectedRarities((prev) =>
@@ -35,7 +35,7 @@ export default function ItemsScreen() {
   };
 
   const toggleStat = (stat: keyof ItemStats) => {
-    setFilterStats((prev) =>
+    setSelectedStats((prev) =>
       prev.includes(stat) ? prev.filter((s) => s !== stat) : [...prev, stat],
     );
   };
@@ -49,8 +49,8 @@ export default function ItemsScreen() {
       return false;
     }
     if (
-      filterStats.length &&
-      !filterStats.every((stat) => item.baseStats[stat])
+      selectedStats.length &&
+      !selectedStats.every((stat) => item.baseStats[stat])
     ) {
       return false;
     }
@@ -64,7 +64,7 @@ export default function ItemsScreen() {
           <ItemFilters
             selectedRarities={selectedRarities}
             selectedSlots={selectedSlots}
-            filterStats={filterStats}
+            selectedStats={selectedStats}
             toggleRarity={toggleRarity}
             toggleSlot={toggleSlot}
             toggleStat={toggleStat}
