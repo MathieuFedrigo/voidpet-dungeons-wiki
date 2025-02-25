@@ -1,10 +1,10 @@
+import styled from "@emotion/native";
 import { useTheme } from "@emotion/react";
 import { PropsWithChildren, useState } from "react";
-import { StyleSheet, TouchableOpacity } from "react-native";
+import { View } from "react-native";
 
 import { IconSymbol } from "@/components/ui/IconSymbol";
 import { ThemedText } from "@/components/ui/ThemedText";
-import { ThemedView } from "@/components/ui/ThemedView";
 
 export function Collapsible({
   children,
@@ -14,12 +14,8 @@ export function Collapsible({
   const theme = useTheme();
 
   return (
-    <ThemedView>
-      <TouchableOpacity
-        style={styles.heading}
-        onPress={() => setIsOpen((value) => !value)}
-        activeOpacity={0.8}
-      >
+    <View>
+      <Button onPress={() => setIsOpen((value) => !value)} activeOpacity={0.8}>
         <IconSymbol
           name="chevron.right"
           size={18}
@@ -29,20 +25,19 @@ export function Collapsible({
         />
 
         <ThemedText type="defaultSemiBold">{title}</ThemedText>
-      </TouchableOpacity>
-      {isOpen && <ThemedView style={styles.content}>{children}</ThemedView>}
-    </ThemedView>
+      </Button>
+      {isOpen && <Content>{children}</Content>}
+    </View>
   );
 }
 
-const styles = StyleSheet.create({
-  heading: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 6,
-  },
-  content: {
-    marginTop: 6,
-    marginLeft: 24,
-  },
+const Button = styled.TouchableOpacity({
+  flexDirection: "row",
+  alignItems: "center",
+  gap: 6,
+});
+
+const Content = styled.View({
+  marginTop: 6,
+  marginLeft: 24,
 });
