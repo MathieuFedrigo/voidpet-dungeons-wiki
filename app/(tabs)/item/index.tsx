@@ -1,12 +1,14 @@
 /* eslint-disable react-native/no-inline-styles */
 import styled from "@emotion/native";
+import { useState } from "react";
 import { FlatList } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { ITEMS_CONFIG } from "@/components/item/item.config";
-import { ITEM_IDS } from "@/components/item/item.type";
+import { ITEM_IDS, ItemStats } from "@/components/item/item.type";
 import { ItemById } from "@/components/item/ItemCard";
 import { ItemFilters } from "@/components/item/ItemFilters";
+import { ItemSorters } from "@/components/item/ItemSorters";
 import { useSelectedItemAttributes } from "@/components/item/useSelectedItemAttributes";
 import { Spacer } from "@/components/ui/Spacer";
 
@@ -40,20 +42,37 @@ export default function ItemsScreen() {
     return true;
   });
 
+  const [selectedSorterStat, setSelectedSorterStat] = useState<
+    keyof ItemStats | null
+  >(null);
+
+  const sortedItems = filteredItems.sort((a, b) => {
+    if (!selectedSorterStat) return 0;
+    const statA = ITEMS_CONFIG[a].baseStats[selectedSorterStat] || 0;
+    const statB = ITEMS_CONFIG[b].baseStats[selectedSorterStat] || 0;
+    return statB - statA;
+  });
+
   return (
     <Container>
       <FlatList
         ListHeaderComponent={
-          <ItemFilters
-            selectedRarities={selectedFilterRarities}
-            selectedSlots={selectedFilterSlots}
-            selectedStats={selectedFilterStats}
-            toggleRarity={toggleFilterRarity}
-            toggleSlot={toggleFilterSlot}
-            toggleStat={toggleFilterStat}
-          />
+          <>
+            <ItemFilters
+              selectedRarities={selectedFilterRarities}
+              selectedSlots={selectedFilterSlots}
+              selectedStats={selectedFilterStats}
+              toggleRarity={toggleFilterRarity}
+              toggleSlot={toggleFilterSlot}
+              toggleStat={toggleFilterStat}
+            />
+            <ItemSorters
+              selectedStat={selectedSorterStat}
+              toggleStat={setSelectedSorterStat}
+            />
+          </>
         }
-        data={filteredItems}
+        data={sortedItems}
         renderItem={({ item }) => <ItemById id={item} />}
         ItemSeparatorComponent={Separator}
         keyExtractor={(item) => item}
