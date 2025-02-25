@@ -18,6 +18,21 @@ interface ItemFiltersProps {
   toggleStat: (stat: keyof ItemStats) => void;
 }
 
+interface RarityFilterProps {
+  selectedRarities: ItemRarity[];
+  toggleRarity: (rarity: ItemRarity) => void;
+}
+
+interface SlotFilterProps {
+  selectedSlots: ItemSlot[];
+  toggleSlot: (slot: ItemSlot) => void;
+}
+
+interface StatFilterProps {
+  filterStats: (keyof ItemStats)[];
+  toggleStat: (stat: keyof ItemStats) => void;
+}
+
 export const ItemFilters = ({
   selectedRarities,
   selectedSlots,
@@ -28,60 +43,82 @@ export const ItemFilters = ({
 }: ItemFiltersProps) => {
   return (
     <Container>
-      <FilterSection>
-        <FilterTitle>Filter by Rarity</FilterTitle>
-        <FilterRow>
-          {ITEM_RARITIES.map((rarity) => {
-            const selected = selectedRarities.includes(rarity);
-            return (
-              <OptionButton
-                key={rarity}
-                selected={selected}
-                onPress={() => toggleRarity(rarity)}
-              >
-                <OptionText>{rarity}</OptionText>
-              </OptionButton>
-            );
-          })}
-        </FilterRow>
-      </FilterSection>
-
-      <FilterSection>
-        <FilterTitle>Filter by Slot</FilterTitle>
-        <FilterRow>
-          {ITEM_SLOTS.map((slot) => {
-            const selected = selectedSlots.includes(slot);
-            return (
-              <OptionButton
-                key={slot}
-                selected={selected}
-                onPress={() => toggleSlot(slot)}
-              >
-                <OptionText>{slot}</OptionText>
-              </OptionButton>
-            );
-          })}
-        </FilterRow>
-      </FilterSection>
-
-      <FilterSection>
-        <FilterTitle>Filter by Stats</FilterTitle>
-        <FilterRow>
-          {ITEM_STATS.map((stat) => {
-            const selected = filterStats.includes(stat);
-            return (
-              <OptionButton
-                key={stat}
-                selected={selected}
-                onPress={() => toggleStat(stat)}
-              >
-                <OptionText>{stat}</OptionText>
-              </OptionButton>
-            );
-          })}
-        </FilterRow>
-      </FilterSection>
+      <RarityFilter
+        selectedRarities={selectedRarities}
+        toggleRarity={toggleRarity}
+      />
+      <SlotFilter selectedSlots={selectedSlots} toggleSlot={toggleSlot} />
+      <StatFilter filterStats={filterStats} toggleStat={toggleStat} />
     </Container>
+  );
+};
+
+export const RarityFilter = ({
+  selectedRarities,
+  toggleRarity,
+}: RarityFilterProps) => {
+  return (
+    <FilterSection>
+      <FilterTitle>Filter by Rarity</FilterTitle>
+      <FilterRow>
+        {ITEM_RARITIES.map((rarity) => {
+          const selected = selectedRarities.includes(rarity);
+          return (
+            <OptionButton
+              key={rarity}
+              selected={selected}
+              onPress={() => toggleRarity(rarity)}
+            >
+              <OptionText>{rarity}</OptionText>
+            </OptionButton>
+          );
+        })}
+      </FilterRow>
+    </FilterSection>
+  );
+};
+
+export const SlotFilter = ({ selectedSlots, toggleSlot }: SlotFilterProps) => {
+  return (
+    <FilterSection>
+      <FilterTitle>Filter by Slot</FilterTitle>
+      <FilterRow>
+        {ITEM_SLOTS.map((slot) => {
+          const selected = selectedSlots.includes(slot);
+          return (
+            <OptionButton
+              key={slot}
+              selected={selected}
+              onPress={() => toggleSlot(slot)}
+            >
+              <OptionText>{slot}</OptionText>
+            </OptionButton>
+          );
+        })}
+      </FilterRow>
+    </FilterSection>
+  );
+};
+
+export const StatFilter = ({ filterStats, toggleStat }: StatFilterProps) => {
+  return (
+    <FilterSection>
+      <FilterTitle>Filter by Stats</FilterTitle>
+      <FilterRow>
+        {ITEM_STATS.map((stat) => {
+          const selected = filterStats.includes(stat);
+          return (
+            <OptionButton
+              key={stat}
+              selected={selected}
+              onPress={() => toggleStat(stat)}
+            >
+              <OptionText>{stat}</OptionText>
+            </OptionButton>
+          );
+        })}
+      </FilterRow>
+    </FilterSection>
   );
 };
 
