@@ -5,7 +5,7 @@ export const BOSS_CONFIG: Record<BossId, Boss> = {
   bogar: {
     id: "bogar",
     name: "Bogar",
-    shortDescription: "",
+    shortDescription: "Daily boss.",
     drops: [
       "rubyCollar",
       "sorrowScarf",
@@ -36,7 +36,7 @@ export const BOSS_CONFIG: Record<BossId, Boss> = {
   deathQuack: {
     id: "deathQuack",
     name: "Death Quack",
-    shortDescription: "",
+    shortDescription: "Might be a plant.",
     drops: [
       "bejeweledPinkScarf",
       "mermaidScarf",
@@ -129,7 +129,7 @@ export const BOSS_CONFIG: Record<BossId, Boss> = {
   flint: {
     id: "flint",
     name: "Flint",
-    shortDescription: "",
+    shortDescription: "Flint's defenses are difficult to break through.",
     drops: [
       "rubyCollar",
       "sorrowScarf",
@@ -255,7 +255,7 @@ export const BOSS_CONFIG: Record<BossId, Boss> = {
   quasar: {
     id: "quasar",
     name: "Quasar",
-    shortDescription: "",
+    shortDescription: "Even more dangerous upright worm.",
     drops: [
       "princesCollar",
       "rubberRingDonut",
@@ -286,7 +286,7 @@ export const BOSS_CONFIG: Record<BossId, Boss> = {
   breakfastClub: {
     id: "breakfastClub",
     name: "Breakfast Club",
-    shortDescription: "",
+    shortDescription: "Why are there 3 bosses?",
     drops: [
       "paisleyCowboyScarf",
       "checkeredScarf",
