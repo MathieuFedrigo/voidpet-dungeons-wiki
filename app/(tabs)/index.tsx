@@ -29,13 +29,15 @@ export default function HomeScreen() {
     - Add sorting
     - put filters/sorting in navigation params
   - ✅ Add Specific Item page
-    - Add "Drops from" section
+    - ✅ Add "Drops from" section
     - Add level stats simulator
 
 - Bosses
-  - Add All Bosses page
-  - Add Specific Boss page
-    - Add "Boss Drops" section
+  - ✅ Add All Bosses page
+  - ✅ Add Specific Boss page
+    - ✅ Add "Boss Drops" section
+    - Add stage evolution info
+    - save last rarity filter
   - Add filters to All Bosses page
 
 - Voidpets
