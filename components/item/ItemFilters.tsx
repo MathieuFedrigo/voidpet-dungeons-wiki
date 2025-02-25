@@ -47,18 +47,18 @@ export const ItemFilters = ({
   return (
     <Container>
       <Collapsible title="Filters">
-        <RarityFilter
+        <RaritySelector
           selectedRarities={selectedRarities}
           toggleRarity={toggleRarity}
         />
-        <SlotFilter selectedSlots={selectedSlots} toggleSlot={toggleSlot} />
-        <StatFilter selectedStats={selectedStats} toggleStat={toggleStat} />
+        <SlotSelector selectedSlots={selectedSlots} toggleSlot={toggleSlot} />
+        <StatSelector selectedStats={selectedStats} toggleStat={toggleStat} />
       </Collapsible>
     </Container>
   );
 };
 
-export const RarityFilter = ({
+export const RaritySelector = ({
   selectedRarities,
   toggleRarity,
   baseRarities = [...ITEM_RARITIES],
@@ -84,7 +84,10 @@ export const RarityFilter = ({
   );
 };
 
-export const SlotFilter = ({ selectedSlots, toggleSlot }: SlotFilterProps) => {
+export const SlotSelector = ({
+  selectedSlots,
+  toggleSlot,
+}: SlotFilterProps) => {
   return (
     <FilterSection>
       <FilterTitle>Filter by Slot</FilterTitle>
@@ -106,7 +109,10 @@ export const SlotFilter = ({ selectedSlots, toggleSlot }: SlotFilterProps) => {
   );
 };
 
-export const StatFilter = ({ selectedStats, toggleStat }: StatFilterProps) => {
+export const StatSelector = ({
+  selectedStats,
+  toggleStat,
+}: StatFilterProps) => {
   return (
     <FilterSection>
       <FilterTitle>Filter by Stats</FilterTitle>

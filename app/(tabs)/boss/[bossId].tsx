@@ -11,7 +11,7 @@ import { BossCardById } from "@/components/boss/BossCard";
 import { ITEMS_CONFIG } from "@/components/item/item.config";
 import { ItemRarity } from "@/components/item/item.type";
 import { ItemById } from "@/components/item/ItemCard";
-import { RarityFilter } from "@/components/item/ItemFilters";
+import { RaritySelector } from "@/components/item/ItemFilters";
 import { Spacer } from "@/components/ui/Spacer";
 
 export default function SpecificBossScreen() {
@@ -41,7 +41,7 @@ export default function SpecificBossScreen() {
             <BossCardById id={bossId} disabled />
             <DropsFromText>DROPS:</DropsFromText>
             <FilterContainer>
-              <RarityFilter
+              <RaritySelector
                 selectedRarities={selectedRarities}
                 toggleRarity={toggleRarity}
                 baseRarities={["common", "rare", "epic", "legendary"]}
