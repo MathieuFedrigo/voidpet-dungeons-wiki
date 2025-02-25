@@ -1,18 +1,38 @@
 /* eslint-disable react-native/no-inline-styles */
 import styled from "@emotion/native";
 import { useLocalSearchParams } from "expo-router";
+import { useState } from "react";
 import { FlatList } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { getBoss } from "@/components/boss/boss.config";
 import { BossId } from "@/components/boss/boss.type";
 import { BossCardById } from "@/components/boss/BossCard";
+import { ITEMS_CONFIG } from "@/components/item/item.config";
+import { ItemRarity } from "@/components/item/item.type";
 import { ItemById } from "@/components/item/ItemCard";
+import { RarityFilter } from "@/components/item/ItemFilters";
 import { Spacer } from "@/components/ui/Spacer";
 
 export default function SpecificBossScreen() {
   const { bossId } = useLocalSearchParams<{ bossId: BossId }>();
   const drops = getBoss(bossId).drops;
+
+  const [selectedRarities, setSelectedRarities] = useState<ItemRarity[]>([]);
+
+  const toggleRarity = (rarity: ItemRarity) => {
+    setSelectedRarities((prev) =>
+      prev.includes(rarity)
+        ? prev.filter((r) => r !== rarity)
+        : [...prev, rarity],
+    );
+  };
+
+  const filteredDrops = drops.filter((id) => {
+    const item = ITEMS_CONFIG[id];
+    return !selectedRarities.length || selectedRarities.includes(item.rarity);
+  });
+
   return (
     <Container>
       <FlatList
@@ -20,9 +40,15 @@ export default function SpecificBossScreen() {
           <>
             <BossCardById id={bossId} disabled />
             <DropsFromText>DROPS:</DropsFromText>
+            <FilterContainer>
+              <RarityFilter
+                selectedRarities={selectedRarities}
+                toggleRarity={toggleRarity}
+              />
+            </FilterContainer>
           </>
         }
-        data={drops}
+        data={filteredDrops}
         renderItem={({ item }) => <ItemById id={item} />}
         ItemSeparatorComponent={Separator}
         keyExtractor={(item) => item}
@@ -47,3 +73,9 @@ const DropsFromText = styled.Text(({ theme }) => ({
   alignSelf: "center",
   fontWeight: "600",
 }));
+
+const FilterContainer = styled.Pressable({
+  alignSelf: "center",
+  width: "100%",
+  maxWidth: 420,
+});
