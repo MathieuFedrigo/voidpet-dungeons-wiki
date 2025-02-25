@@ -20,20 +20,20 @@ interface ItemFiltersProps {
   toggleStat: (stat: keyof ItemStats) => void;
 }
 
-interface RarityFilterProps {
+interface RaritySelectorProps {
   selectedRarities: ItemRarity[];
   toggleRarity: (rarity: ItemRarity) => void;
   baseRarities?: ItemRarity[];
   title: string;
 }
 
-interface SlotFilterProps {
+interface SlotSelectorProps {
   selectedSlots: ItemSlot[];
   toggleSlot: (slot: ItemSlot) => void;
   title: string;
 }
 
-interface StatFilterProps {
+interface StatSelectorProps {
   selectedStats: (keyof ItemStats)[];
   toggleStat: (stat: keyof ItemStats) => void;
   title: string;
@@ -75,7 +75,7 @@ export const RaritySelector = ({
   toggleRarity,
   baseRarities = [...ITEM_RARITIES],
   title,
-}: RarityFilterProps) => {
+}: RaritySelectorProps) => {
   return (
     <SelectorSection>
       <SelectorTitle>{title}</SelectorTitle>
@@ -101,7 +101,7 @@ export const SlotSelector = ({
   selectedSlots,
   toggleSlot,
   title,
-}: SlotFilterProps) => {
+}: SlotSelectorProps) => {
   return (
     <SelectorSection>
       <SelectorTitle>{title}</SelectorTitle>
@@ -127,7 +127,7 @@ export const StatSelector = ({
   selectedStats,
   toggleStat,
   title,
-}: StatFilterProps) => {
+}: StatSelectorProps) => {
   return (
     <SelectorSection>
       <SelectorTitle>{title}</SelectorTitle>
