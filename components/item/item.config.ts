@@ -668,7 +668,7 @@ export const ITEMS_CONFIG: Record<ItemId, Item> = {
   unicornHorns: {
     id: "unicornHorns",
     name: "Unicorn Horn",
-    baseStats: { attack: 18, crit: 3 },
+    baseStats: { attack: 18, speed: 3 },
     rarity: "legendary",
     slot: "hat",
     description: "Gain 2% attack each turn",
