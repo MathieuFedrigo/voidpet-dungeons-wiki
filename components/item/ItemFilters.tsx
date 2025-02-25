@@ -77,9 +77,9 @@ export const RaritySelector = ({
   title,
 }: RarityFilterProps) => {
   return (
-    <FilterSection>
-      <FilterTitle>{title}</FilterTitle>
-      <FilterRow>
+    <SelectorSection>
+      <SelectorTitle>{title}</SelectorTitle>
+      <SelectorRow>
         {baseRarities.map((rarity) => {
           const selected = selectedRarities.includes(rarity);
           return (
@@ -92,8 +92,8 @@ export const RaritySelector = ({
             </OptionButton>
           );
         })}
-      </FilterRow>
-    </FilterSection>
+      </SelectorRow>
+    </SelectorSection>
   );
 };
 
@@ -103,9 +103,9 @@ export const SlotSelector = ({
   title,
 }: SlotFilterProps) => {
   return (
-    <FilterSection>
-      <FilterTitle>{title}</FilterTitle>
-      <FilterRow>
+    <SelectorSection>
+      <SelectorTitle>{title}</SelectorTitle>
+      <SelectorRow>
         {ITEM_SLOTS.map((slot) => {
           const selected = selectedSlots.includes(slot);
           return (
@@ -118,8 +118,8 @@ export const SlotSelector = ({
             </OptionButton>
           );
         })}
-      </FilterRow>
-    </FilterSection>
+      </SelectorRow>
+    </SelectorSection>
   );
 };
 
@@ -129,9 +129,9 @@ export const StatSelector = ({
   title,
 }: StatFilterProps) => {
   return (
-    <FilterSection>
-      <FilterTitle>{title}</FilterTitle>
-      <FilterRow>
+    <SelectorSection>
+      <SelectorTitle>{title}</SelectorTitle>
+      <SelectorRow>
         {ITEM_STATS.map((stat) => {
           const selected = selectedStats.includes(stat);
           return (
@@ -144,8 +144,8 @@ export const StatSelector = ({
             </OptionButton>
           );
         })}
-      </FilterRow>
-    </FilterSection>
+      </SelectorRow>
+    </SelectorSection>
   );
 };
 
@@ -156,17 +156,17 @@ const Container = styled.View({
   marginBottom: 16,
 });
 
-const FilterSection = styled.View({
+const SelectorSection = styled.View({
   marginBottom: 10,
 });
 
-const FilterTitle = styled.Text(({ theme }) => ({
+const SelectorTitle = styled.Text(({ theme }) => ({
   fontWeight: "600",
   marginBottom: 6,
   color: theme.colors.text,
 }));
 
-const FilterRow = styled.View({
+const SelectorRow = styled.View({
   flexDirection: "row",
 });
 
