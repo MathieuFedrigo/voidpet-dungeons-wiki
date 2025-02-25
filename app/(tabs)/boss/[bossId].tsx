@@ -11,7 +11,7 @@ import { BossCardById } from "@/components/boss/BossCard";
 import { ITEMS_CONFIG } from "@/components/item/item.config";
 import { ItemRarity } from "@/components/item/item.type";
 import { ItemById } from "@/components/item/ItemCard";
-import { RaritySelector } from "@/components/item/ItemFilters";
+import { RaritySelector } from "@/components/item/ItemSelectors";
 import { Spacer } from "@/components/ui/Spacer";
 
 export default function SpecificBossScreen() {
