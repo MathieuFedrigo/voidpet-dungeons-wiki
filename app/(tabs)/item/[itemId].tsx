@@ -1,11 +1,14 @@
 /* eslint-disable react-native/no-inline-styles */
 import styled from "@emotion/native";
 import { useLocalSearchParams } from "expo-router";
+import { FlatList } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import { getBoss, getBossIdsThatDropItem } from "@/components/boss/boss.config";
+import { getBossIdsThatDropItem } from "@/components/boss/boss.config";
+import { BossCardById } from "@/components/boss/BossCard";
 import { ItemId } from "@/components/item/item.type";
 import { ItemById } from "@/components/item/ItemCard";
+import { Spacer } from "@/components/ui/Spacer";
 
 export default function SpecificItemScreen() {
   const { itemId } = useLocalSearchParams<{ itemId: ItemId }>();
@@ -13,14 +16,18 @@ export default function SpecificItemScreen() {
     <Container>
       <ItemById id={itemId} disabled />
       <DropsFromText>DROPS FROM:</DropsFromText>
-      <BossesText>
-        {getBossIdsThatDropItem(itemId)
-          .map((bossId) => getBoss(bossId).name)
-          .join(", ")}
-      </BossesText>
+      <FlatList
+        data={getBossIdsThatDropItem(itemId)}
+        renderItem={({ item }) => <BossCardById id={item} />}
+        ItemSeparatorComponent={Separator}
+        keyExtractor={(item) => item}
+        ListFooterComponent={<Spacer vertical={64} />}
+      />
     </Container>
   );
 }
+
+export const Separator = styled.View({ height: 16 });
 
 const Container = styled(SafeAreaView)(({ theme }) => ({
   flex: 1,
@@ -34,10 +41,4 @@ const DropsFromText = styled.Text(({ theme }) => ({
   color: theme.colors.voidpet.basic.lightText,
   alignSelf: "center",
   fontWeight: "600",
-}));
-
-const BossesText = styled.Text(({ theme }) => ({
-  fontSize: 16,
-  color: theme.colors.voidpet.basic.lightText,
-  alignSelf: "center",
 }));
