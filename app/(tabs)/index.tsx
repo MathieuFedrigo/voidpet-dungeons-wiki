@@ -26,7 +26,7 @@ export default function HomeScreen() {
   - ✅ Add All Items page
   - ✅ Add filters to All Items page
     - Make them beautiful
-    - Add sorting
+    - ✅ Add sorting
     - put filters/sorting in navigation params
   - ✅ Add Specific Item page
     - ✅ Add "Drops from" section
@@ -38,7 +38,7 @@ export default function HomeScreen() {
     - ✅ Add "Boss Drops" section
     - Add stage evolution info
     - save last rarity filter
-  - Add filters to All Bosses page
+  - ✅ Add filters to All Bosses page
 
 - Voidpets
   - Add All Voidpets page
