@@ -44,6 +44,7 @@ export default function SpecificBossScreen() {
               <RarityFilter
                 selectedRarities={selectedRarities}
                 toggleRarity={toggleRarity}
+                baseRarities={["common", "rare", "epic", "legendary"]}
               />
             </FilterContainer>
           </>
