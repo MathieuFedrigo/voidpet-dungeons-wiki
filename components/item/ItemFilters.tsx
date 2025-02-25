@@ -21,6 +21,7 @@ interface ItemFiltersProps {
 interface RarityFilterProps {
   selectedRarities: ItemRarity[];
   toggleRarity: (rarity: ItemRarity) => void;
+  baseRarities?: ItemRarity[];
 }
 
 interface SlotFilterProps {
@@ -56,12 +57,13 @@ export const ItemFilters = ({
 export const RarityFilter = ({
   selectedRarities,
   toggleRarity,
+  baseRarities = [...ITEM_RARITIES],
 }: RarityFilterProps) => {
   return (
     <FilterSection>
       <FilterTitle>Filter by Rarity</FilterTitle>
       <FilterRow>
-        {ITEM_RARITIES.map((rarity) => {
+        {baseRarities.map((rarity) => {
           const selected = selectedRarities.includes(rarity);
           return (
             <OptionButton
