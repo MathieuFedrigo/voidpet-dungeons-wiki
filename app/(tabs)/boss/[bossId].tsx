@@ -15,9 +15,13 @@ export default function SpecificBossScreen() {
   const drops = getBoss(bossId).drops;
   return (
     <Container>
-      <BossCardById id={bossId} disabled />
-      <DropsFromText>DROPS:</DropsFromText>
       <FlatList
+        ListHeaderComponent={
+          <>
+            <BossCardById id={bossId} disabled />
+            <DropsFromText>DROPS:</DropsFromText>
+          </>
+        }
         data={drops}
         renderItem={({ item }) => <ItemById id={item} />}
         ItemSeparatorComponent={Separator}
