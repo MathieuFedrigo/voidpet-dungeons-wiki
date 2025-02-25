@@ -9,8 +9,9 @@ import { ThemedText } from "@/components/ui/ThemedText";
 export function Collapsible({
   children,
   title,
-}: PropsWithChildren & { title: string }) {
-  const [isOpen, setIsOpen] = useState(false);
+  defaultOpen = false,
+}: PropsWithChildren<{ title: string; defaultOpen?: boolean }>) {
+  const [isOpen, setIsOpen] = useState(defaultOpen);
   const theme = useTheme();
 
   return (
