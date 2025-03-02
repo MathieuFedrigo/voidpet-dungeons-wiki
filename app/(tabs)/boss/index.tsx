@@ -6,8 +6,11 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { BOSS_IDS } from "@/components/boss/boss.type";
 import { BossCardById } from "@/components/boss/BossCard";
 import { Spacer } from "@/components/ui/Spacer";
+import { useMaxNumColumns } from "@/hooks/useMaxNumColumns";
 
 export default function BossesScreen() {
+  const numColumns = useMaxNumColumns({ itemWidth: 420, itemSpacing: 16 });
+
   return (
     <Container>
       <FlatList
@@ -16,6 +19,11 @@ export default function BossesScreen() {
         ItemSeparatorComponent={Separator}
         keyExtractor={(item) => item}
         ListFooterComponent={<Spacer vertical={64} />}
+        numColumns={numColumns}
+        key={numColumns}
+        columnWrapperStyle={
+          numColumns > 1 ? { justifyContent: "center", gap: 16 } : undefined
+        }
       />
     </Container>
   );
