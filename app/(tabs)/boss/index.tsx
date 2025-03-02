@@ -9,7 +9,7 @@ import { Spacer } from "@/components/ui/Spacer";
 import { useMaxNumColumns } from "@/hooks/useMaxNumColumns";
 
 export default function BossesScreen() {
-  const numColumns = useMaxNumColumns({ itemWidth: 420, itemSpacing: 16 });
+  const { numColumns } = useMaxNumColumns({ itemWidth: 420, itemSpacing: 16 });
 
   return (
     <Container>

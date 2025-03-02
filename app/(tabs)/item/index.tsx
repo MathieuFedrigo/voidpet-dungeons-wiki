@@ -54,7 +54,7 @@ export default function ItemsScreen() {
     return statB - statA;
   });
 
-  const numColumns = useMaxNumColumns({ itemWidth: 420, itemSpacing: 16 });
+  const { numColumns } = useMaxNumColumns({ itemWidth: 420, itemSpacing: 16 });
 
   return (
     <Container>

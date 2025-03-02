@@ -24,5 +24,5 @@ export const useMaxNumColumns = ({
     Math.floor((effectiveWidth + itemSpacing) / (itemWidth + itemSpacing)),
   );
 
-  return Math.min(numColumns, maxColumns);
+  return { numColumns: Math.min(numColumns, maxColumns) };
 };
