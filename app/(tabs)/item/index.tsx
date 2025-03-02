@@ -11,6 +11,7 @@ import { ItemFilters } from "@/components/item/ItemFilters";
 import { ItemSorters } from "@/components/item/ItemSorters";
 import { useSelectedItemAttributes } from "@/components/item/useSelectedItemAttributes";
 import { Spacer } from "@/components/ui/Spacer";
+import { useMaxNumColumns } from "@/hooks/useMaxNumColumns";
 
 export default function ItemsScreen() {
   const {
@@ -53,6 +54,8 @@ export default function ItemsScreen() {
     return statB - statA;
   });
 
+  const numColumns = useMaxNumColumns({ itemWidth: 420, itemSpacing: 16 });
+
   return (
     <Container>
       <FlatList
@@ -77,6 +80,11 @@ export default function ItemsScreen() {
         ItemSeparatorComponent={Separator}
         keyExtractor={(item) => item}
         ListFooterComponent={<Spacer vertical={64} />}
+        numColumns={numColumns}
+        key={numColumns}
+        columnWrapperStyle={
+          numColumns > 1 ? { justifyContent: "center", gap: 16 } : undefined
+        }
       />
     </Container>
   );
@@ -84,7 +92,7 @@ export default function ItemsScreen() {
 
 const Separator = styled.View({ height: 16 });
 
-const Container = styled(SafeAreaView)(({ theme }) => ({
+export const Container = styled(SafeAreaView)(({ theme }) => ({
   flex: 1,
   padding: 12,
   backgroundColor: theme.colors.voidpet.basic.itemBackground,
