@@ -9,9 +9,17 @@ import { BossCardById } from "@/components/boss/BossCard";
 import { ItemId } from "@/components/item/item.type";
 import { ItemById } from "@/components/item/ItemCard";
 import { Spacer } from "@/components/ui/Spacer";
+import { useMaxNumColumns } from "@/hooks/useMaxNumColumns";
 
 export default function SpecificItemScreen() {
   const { itemId } = useLocalSearchParams<{ itemId: ItemId }>();
+
+  const { numColumns, columnWrapperStyle } = useMaxNumColumns({
+    itemWidth: 420,
+    itemSpacing: 16,
+    maxColumns: 2,
+  });
+
   return (
     <Container>
       <FlatList
@@ -26,6 +34,9 @@ export default function SpecificItemScreen() {
         ItemSeparatorComponent={Separator}
         keyExtractor={(item) => item}
         ListFooterComponent={<Spacer vertical={64} />}
+        numColumns={numColumns}
+        key={numColumns}
+        columnWrapperStyle={columnWrapperStyle}
       />
     </Container>
   );
