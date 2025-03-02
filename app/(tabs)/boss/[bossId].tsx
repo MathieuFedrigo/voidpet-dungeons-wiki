@@ -13,6 +13,7 @@ import { ItemRarity } from "@/components/item/item.type";
 import { ItemById } from "@/components/item/ItemCard";
 import { RaritySelector } from "@/components/item/ItemSelectors";
 import { Spacer } from "@/components/ui/Spacer";
+import { useMaxNumColumns } from "@/hooks/useMaxNumColumns";
 
 export default function SpecificBossScreen() {
   const { bossId } = useLocalSearchParams<{ bossId: BossId }>();
@@ -31,6 +32,12 @@ export default function SpecificBossScreen() {
   const filteredDrops = drops.filter((id) => {
     const item = ITEMS_CONFIG[id];
     return !selectedRarities.length || selectedRarities.includes(item.rarity);
+  });
+
+  const { numColumns, columnWrapperStyle } = useMaxNumColumns({
+    itemWidth: 420,
+    itemSpacing: 16,
+    maxColumns: 2,
   });
 
   return (
@@ -55,6 +62,9 @@ export default function SpecificBossScreen() {
         ItemSeparatorComponent={Separator}
         keyExtractor={(item) => item}
         ListFooterComponent={<Spacer vertical={64} />}
+        numColumns={numColumns}
+        key={numColumns}
+        columnWrapperStyle={columnWrapperStyle}
       />
     </Container>
   );
