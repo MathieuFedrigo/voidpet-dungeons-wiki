@@ -3,9 +3,11 @@ import { useWindowDimensions } from "react-native";
 export const useMaxNumColumns = ({
   itemWidth,
   itemSpacing,
+  maxColumns = Infinity,
 }: {
   itemWidth: number;
   itemSpacing: number;
+  maxColumns?: number;
 }) => {
   const { width } = useWindowDimensions();
 
@@ -22,5 +24,5 @@ export const useMaxNumColumns = ({
     Math.floor((effectiveWidth + itemSpacing) / (itemWidth + itemSpacing)),
   );
 
-  return numColumns;
+  return Math.min(numColumns, maxColumns);
 };
