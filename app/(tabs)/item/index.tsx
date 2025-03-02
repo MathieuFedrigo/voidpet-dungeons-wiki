@@ -54,7 +54,10 @@ export default function ItemsScreen() {
     return statB - statA;
   });
 
-  const { numColumns } = useMaxNumColumns({ itemWidth: 420, itemSpacing: 16 });
+  const { numColumns, columnWrapperStyle } = useMaxNumColumns({
+    itemWidth: 420,
+    itemSpacing: 16,
+  });
 
   return (
     <Container>
@@ -82,9 +85,7 @@ export default function ItemsScreen() {
         ListFooterComponent={<Spacer vertical={64} />}
         numColumns={numColumns}
         key={numColumns}
-        columnWrapperStyle={
-          numColumns > 1 ? { justifyContent: "center", gap: 16 } : undefined
-        }
+        columnWrapperStyle={columnWrapperStyle}
       />
     </Container>
   );

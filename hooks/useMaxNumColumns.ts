@@ -24,5 +24,11 @@ export const useMaxNumColumns = ({
     Math.floor((effectiveWidth + itemSpacing) / (itemWidth + itemSpacing)),
   );
 
-  return { numColumns: Math.min(numColumns, maxColumns) };
+  return {
+    numColumns: Math.min(numColumns, maxColumns),
+    columnWrapperStyle:
+      numColumns > 1
+        ? ({ justifyContent: "center", gap: itemSpacing } as const)
+        : undefined,
+  };
 };

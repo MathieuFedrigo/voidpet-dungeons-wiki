@@ -9,7 +9,10 @@ import { Spacer } from "@/components/ui/Spacer";
 import { useMaxNumColumns } from "@/hooks/useMaxNumColumns";
 
 export default function BossesScreen() {
-  const { numColumns } = useMaxNumColumns({ itemWidth: 420, itemSpacing: 16 });
+  const { numColumns, columnWrapperStyle } = useMaxNumColumns({
+    itemWidth: 420,
+    itemSpacing: 16,
+  });
 
   return (
     <Container>
@@ -21,9 +24,7 @@ export default function BossesScreen() {
         ListFooterComponent={<Spacer vertical={64} />}
         numColumns={numColumns}
         key={numColumns}
-        columnWrapperStyle={
-          numColumns > 1 ? { justifyContent: "center", gap: 16 } : undefined
-        }
+        columnWrapperStyle={columnWrapperStyle}
       />
     </Container>
   );
