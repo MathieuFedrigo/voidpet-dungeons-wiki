@@ -1,23 +1,23 @@
 import { router, useLocalSearchParams } from "expo-router";
-import { useState } from "react";
 
 import {
   isItemRarity,
   isItemSlot,
+  isItemStat,
   ItemRarity,
   ItemSlot,
   ItemStats,
 } from "./item.type";
 
 export const useSelectedItemAttributes = () => {
-  const { rarityParam, slotParam } = useLocalSearchParams<{
+  const { rarityParam, slotParam, statsParam } = useLocalSearchParams<{
     rarityParam: string;
     slotParam: string;
+    statsParam: string;
   }>();
   const selectedRarities = (rarityParam?.split(",") || []).filter(isItemRarity);
   const selectedSlots = (slotParam?.split(",") || []).filter(isItemSlot);
-
-  const [selectedStats, setSelectedStats] = useState<(keyof ItemStats)[]>([]);
+  const selectedStats = (statsParam?.split(",") || []).filter(isItemStat);
 
   const toggleRarity = (rarity: ItemRarity) => {
     const newSelectedRarities = selectedRarities.includes(rarity)
@@ -36,9 +36,11 @@ export const useSelectedItemAttributes = () => {
   };
 
   const toggleStat = (stat: keyof ItemStats) => {
-    setSelectedStats((prev) =>
-      prev.includes(stat) ? prev.filter((s) => s !== stat) : [...prev, stat],
-    );
+    const newSelectedStats = selectedStats.includes(stat)
+      ? selectedStats.filter((s) => s !== stat)
+      : [...selectedStats, stat];
+
+    router.setParams({ statsParam: newSelectedStats.join(",") });
   };
 
   return {
