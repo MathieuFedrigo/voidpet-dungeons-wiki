@@ -1,13 +1,22 @@
 import { router, useLocalSearchParams } from "expo-router";
 import { useState } from "react";
 
-import { isItemRarity, ItemRarity, ItemSlot, ItemStats } from "./item.type";
+import {
+  isItemRarity,
+  isItemSlot,
+  ItemRarity,
+  ItemSlot,
+  ItemStats,
+} from "./item.type";
 
 export const useSelectedItemAttributes = () => {
-  const { rarityParam } = useLocalSearchParams<{ rarityParam: string }>();
+  const { rarityParam, slotParam } = useLocalSearchParams<{
+    rarityParam: string;
+    slotParam: string;
+  }>();
   const selectedRarities = (rarityParam?.split(",") || []).filter(isItemRarity);
+  const selectedSlots = (slotParam?.split(",") || []).filter(isItemSlot);
 
-  const [selectedSlots, setSelectedSlots] = useState<ItemSlot[]>([]);
   const [selectedStats, setSelectedStats] = useState<(keyof ItemStats)[]>([]);
 
   const toggleRarity = (rarity: ItemRarity) => {
@@ -19,9 +28,11 @@ export const useSelectedItemAttributes = () => {
   };
 
   const toggleSlot = (slot: ItemSlot) => {
-    setSelectedSlots((prev) =>
-      prev.includes(slot) ? prev.filter((s) => s !== slot) : [...prev, slot],
-    );
+    const newSelectedSlots = selectedSlots.includes(slot)
+      ? selectedSlots.filter((s) => s !== slot)
+      : [...selectedSlots, slot];
+
+    router.setParams({ slotParam: newSelectedSlots.join(",") });
   };
 
   const toggleStat = (stat: keyof ItemStats) => {
@@ -29,6 +40,7 @@ export const useSelectedItemAttributes = () => {
       prev.includes(stat) ? prev.filter((s) => s !== stat) : [...prev, stat],
     );
   };
+
   return {
     selectedRarities,
     selectedSlots,
