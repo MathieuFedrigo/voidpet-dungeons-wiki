@@ -6,6 +6,8 @@ export const ITEM_STATS = [
   "crit",
 ] as const;
 export type ItemStats = { [key in (typeof ITEM_STATS)[number]]?: number };
+export const isItemStat = (param: string): param is keyof ItemStats =>
+  ITEM_STATS.includes(param as keyof ItemStats);
 
 export const ITEM_RARITIES = [
   "common",
@@ -15,9 +17,13 @@ export const ITEM_RARITIES = [
   "uber",
 ] as const;
 export type ItemRarity = (typeof ITEM_RARITIES)[number];
+export const isItemRarity = (param: string): param is ItemRarity =>
+  ITEM_RARITIES.includes(param as ItemRarity);
 
 export const ITEM_SLOTS = ["hat", "neck", "trinket"] as const;
 export type ItemSlot = (typeof ITEM_SLOTS)[number];
+export const isItemSlot = (param: string): param is ItemSlot =>
+  ITEM_SLOTS.includes(param as ItemSlot);
 
 export type Item = {
   id: ItemId;
