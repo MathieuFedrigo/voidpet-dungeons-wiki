@@ -1,21 +1,40 @@
 import styled from "@emotion/native";
 import { useTheme } from "@emotion/react";
-import { PropsWithChildren, useState } from "react";
+import { PropsWithChildren } from "react";
 import { View } from "react-native";
+import { create } from "zustand";
 
 import { IconSymbol } from "@/components/ui/IconSymbol";
 import { ThemedText } from "@/components/ui/ThemedText";
+
+interface CollapsibleState {
+  openStates: Record<string, boolean>;
+  toggle: (id: string) => void;
+}
+
+export const useCollapsibleStore = create<CollapsibleState>((set) => ({
+  openStates: {},
+  toggle: (id) =>
+    set((state) => ({
+      openStates: {
+        ...state.openStates,
+        [id]: !state.openStates[id],
+      },
+    })),
+}));
 
 export function Collapsible({
   children,
   title,
 }: PropsWithChildren<{ title: string }>) {
-  const [isOpen, setIsOpen] = useState(false);
+  const toggle = useCollapsibleStore((s) => s.toggle);
+  const isOpen = useCollapsibleStore((s) => s.openStates[title]);
+
   const theme = useTheme();
 
   return (
     <View>
-      <Button onPress={() => setIsOpen((value) => !value)} activeOpacity={0.8}>
+      <Button onPress={() => toggle(title)} activeOpacity={0.8}>
         <IconSymbol
           name="chevron.right"
           size={18}
