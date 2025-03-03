@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import styled from "@emotion/native";
-import { useState } from "react";
+import { router, useLocalSearchParams } from "expo-router";
 import { FlatList } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -43,9 +43,14 @@ export default function ItemsScreen() {
     return true;
   });
 
-  const [selectedSorterStat, setSelectedSorterStat] = useState<
-    keyof ItemStats | null
-  >(null);
+  const { sorterStatParam } = useLocalSearchParams<{
+    sorterStatParam: string;
+  }>();
+  const selectedSorterStat = sorterStatParam as keyof ItemStats | null;
+
+  const toggleSorterStat = (stat: keyof ItemStats | null) => {
+    router.setParams({ sorterStatParam: stat });
+  };
 
   const sortedItems = filteredItems.sort((a, b) => {
     if (!selectedSorterStat) return 0;
@@ -74,7 +79,7 @@ export default function ItemsScreen() {
             />
             <ItemSorters
               selectedStat={selectedSorterStat}
-              toggleStat={setSelectedSorterStat}
+              toggleStat={toggleSorterStat}
             />
           </>
         }
