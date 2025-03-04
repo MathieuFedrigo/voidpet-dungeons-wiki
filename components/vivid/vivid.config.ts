@@ -197,3 +197,201 @@ export const VOID_VIVIDS_CONFIG: Record<VividName, Vivid> = {
     type: "Void",
   },
 };
+
+export const DEFAULT_VIVIDS_CONFIG = {
+  Phantom: {
+    name: "Phantom",
+    rarity: "Rare",
+    colors: {
+      primary: "",
+      secondary: "",
+      tertiary: "",
+    },
+    cost: 10,
+    description: "",
+    type: "Earth",
+  },
+  Ephemeral: {
+    name: "Ephemeral",
+    rarity: "Rare",
+    colors: {
+      primary: "",
+      secondary: "",
+      tertiary: "",
+    },
+    cost: 15,
+    description: "",
+    type: "Earth",
+  },
+  Celestial: {
+    name: "Celestial",
+    rarity: "Rare",
+    colors: {
+      primary: "",
+      secondary: "",
+      tertiary: "",
+    },
+    cost: 20,
+    description: "",
+    type: "Earth",
+  },
+  Cataclysmic: {
+    name: "Cataclysmic",
+    rarity: "Rare",
+    colors: {
+      primary: "",
+      secondary: "",
+      tertiary: "",
+    },
+    cost: 25,
+    description: "",
+    type: "Earth",
+  },
+
+  Jaded: {
+    name: "Jaded",
+    rarity: "Fabled",
+    colors: {
+      primary: "",
+      secondary: "",
+      tertiary: "",
+    },
+    cost: 50,
+    description: "",
+    type: "Earth",
+  },
+  Ethereal: {
+    name: "Ethereal",
+    rarity: "Fabled",
+    colors: {
+      primary: "",
+      secondary: "",
+      tertiary: "",
+    },
+    cost: 75,
+    description: "",
+    type: "Earth",
+  },
+  Illusive: {
+    name: "Illusive",
+    rarity: "Fabled",
+    colors: {
+      primary: "",
+      secondary: "",
+      tertiary: "",
+    },
+    cost: 100,
+    description: "",
+    type: "Earth",
+  },
+  Cryptic: {
+    name: "Cryptic",
+    rarity: "Fabled",
+    colors: {
+      primary: "",
+      secondary: "",
+      tertiary: "",
+    },
+    cost: 125,
+    description: "",
+    type: "Earth",
+  },
+
+  Arcane: {
+    name: "Arcane",
+    rarity: "Mythical",
+    colors: {
+      primary: "",
+      secondary: "",
+      tertiary: "",
+    },
+    cost: 270,
+    description: "",
+    type: "Earth",
+  },
+  Resolute: {
+    name: "Resolute",
+    rarity: "Mythical",
+    colors: {
+      primary: "",
+      secondary: "",
+      tertiary: "",
+    },
+    cost: 405,
+    description: "",
+    type: "Earth",
+  },
+  Fathomless: {
+    name: "Fathomless",
+    rarity: "Mythical",
+    colors: {
+      primary: "",
+      secondary: "",
+      tertiary: "",
+    },
+    cost: 540,
+    description: "",
+    type: "Earth",
+  },
+  Elemental: {
+    name: "Elemental",
+    rarity: "Mythical",
+    colors: {
+      primary: "",
+      secondary: "",
+      tertiary: "",
+    },
+    cost: 675,
+    description: "",
+    type: "Earth",
+  },
+
+  Corrosive: {
+    name: "Corrosive",
+    rarity: "Absurd",
+    colors: {
+      primary: "",
+      secondary: "",
+      tertiary: "",
+    },
+    cost: 1470,
+    description: "",
+    type: "Earth",
+  },
+  Unidentified: {
+    name: "Unidentified",
+    rarity: "Absurd",
+    colors: {
+      primary: "",
+      secondary: "",
+      tertiary: "",
+    },
+    cost: 2205,
+    description: "",
+    type: "Earth",
+  },
+  Intoxicating: {
+    name: "Intoxicating",
+    rarity: "Absurd",
+    colors: {
+      primary: "",
+      secondary: "",
+      tertiary: "",
+    },
+    cost: 2940,
+    description: "",
+    type: "Earth",
+  },
+  Tartarean: {
+    name: "Tartarean",
+    rarity: "Absurd",
+    colors: {
+      primary: "",
+      secondary: "",
+      tertiary: "",
+    },
+    cost: 3675,
+    description: "",
+    type: "Earth",
+  },
+};
