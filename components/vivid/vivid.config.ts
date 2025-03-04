@@ -196,6 +196,202 @@ export const VOID_VIVIDS_CONFIG: Record<VividName, Vivid> = {
     description: "Gain 1% attack each turn",
     type: "Void",
   },
+
+  Allegiant: {
+    name: "Allegiant",
+    rarity: "Rare",
+    colors: {
+      primary: "",
+      secondary: "",
+      tertiary: "",
+    },
+    cost: 10,
+    description: "+5% defense",
+    type: "Earth",
+  },
+  Adamant: {
+    name: "Adamant",
+    rarity: "Rare",
+    colors: {
+      primary: "",
+      secondary: "",
+      tertiary: "",
+    },
+    cost: 15,
+    description: "+5% attack",
+    type: "Earth",
+  },
+  Resonant: {
+    name: "Resonant",
+    rarity: "Rare",
+    colors: {
+      primary: "",
+      secondary: "",
+      tertiary: "",
+    },
+    cost: 20,
+    description: "+5% speed",
+    type: "Earth",
+  },
+  Sacral: {
+    name: "Sacral",
+    rarity: "Rare",
+    colors: {
+      primary: "",
+      secondary: "",
+      tertiary: "",
+    },
+    cost: 25,
+    description: "+5% stamina",
+    type: "Earth",
+  },
+
+  Veracious: {
+    name: "Veracious",
+    rarity: "Fabled",
+    colors: {
+      primary: "",
+      secondary: "",
+      tertiary: "",
+    },
+    cost: 50,
+    description: "+5% critical damage",
+    type: "Earth",
+  },
+  Diaphanous: {
+    name: "Diaphanous",
+    rarity: "Fabled",
+    colors: {
+      primary: "",
+      secondary: "",
+      tertiary: "",
+    },
+    cost: 75,
+    description: "+2.5% non-boss damage",
+    type: "Earth",
+  },
+  Fictile: {
+    name: "Fictile",
+    rarity: "Fabled",
+    colors: {
+      primary: "",
+      secondary: "",
+      tertiary: "",
+    },
+    cost: 100,
+    description: "+10% healing received",
+    type: "Earth",
+  },
+  Tectonic: {
+    name: "Tectonic",
+    rarity: "Fabled",
+    colors: {
+      primary: "",
+      secondary: "",
+      tertiary: "",
+    },
+    cost: 125,
+    description: "+1% armor penetration",
+    type: "Earth",
+  },
+
+  Apocryphal: {
+    name: "Apocryphal",
+    rarity: "Mythical",
+    colors: {
+      primary: "",
+      secondary: "",
+      tertiary: "",
+    },
+    cost: 270,
+    description: "+5% boss damage",
+    type: "Earth",
+  },
+  Primeval: {
+    name: "Primeval",
+    rarity: "Mythical",
+    colors: {
+      primary: "",
+      secondary: "",
+      tertiary: "",
+    },
+    cost: 405,
+    description: "+5% basic attack damage",
+    type: "Earth",
+  },
+  Sepulchral: {
+    name: "Sepulchral",
+    rarity: "Mythical",
+    colors: {
+      primary: "",
+      secondary: "",
+      tertiary: "",
+    },
+    cost: 540,
+    description: "+5% critical chance",
+    type: "Earth",
+  },
+  Exalted: {
+    name: "Exalted",
+    rarity: "Mythical",
+    colors: {
+      primary: "",
+      secondary: "",
+      tertiary: "",
+    },
+    cost: 675,
+    description: "+10% healing effectiveness",
+    type: "Earth",
+  },
+
+  Pestilent: {
+    name: "Pestilent",
+    rarity: "Absurd",
+    colors: {
+      primary: "",
+      secondary: "",
+      tertiary: "",
+    },
+    cost: 1470,
+    description: "Heal for 5% of max health when an enemy dies",
+    type: "Earth",
+  },
+  Leviathan: {
+    name: "Leviathan",
+    rarity: "Absurd",
+    colors: {
+      primary: "",
+      secondary: "",
+      tertiary: "",
+    },
+    cost: 2205,
+    description: "Gain 10% of defense as attack",
+    type: "Earth",
+  },
+  Blasphemous: {
+    name: "Blasphemous",
+    rarity: "Absurd",
+    colors: {
+      primary: "",
+      secondary: "",
+      tertiary: "",
+    },
+    cost: 2940,
+    description: "Increase damage by 10% when health is below 30%",
+    type: "Earth",
+  },
+  Antediluvian: {
+    name: "Antediluvian",
+    rarity: "Absurd",
+    colors: {
+      primary: "",
+      secondary: "",
+      tertiary: "",
+    },
+    cost: 3675,
+    description: "+3% health each turn",
+    type: "Earth",
+  },
 };
 
 export const DEFAULT_VIVIDS_CONFIG = {

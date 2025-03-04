@@ -25,6 +25,7 @@ export type Vivid = {
 };
 
 export const VIVID_NAMES = [
+  // Void
   "Phantom",
   "Ephemeral",
   "Celestial",
@@ -44,5 +45,26 @@ export const VIVID_NAMES = [
   "Unidentified",
   "Intoxicating",
   "Tartarean",
+
+  // Wood
+  "Allegiant",
+  "Adamant",
+  "Resonant",
+  "Sacral",
+
+  "Veracious",
+  "Diaphanous",
+  "Fictile",
+  "Tectonic",
+
+  "Apocryphal",
+  "Primeval",
+  "Sepulchral",
+  "Exalted",
+
+  "Pestilent",
+  "Leviathan",
+  "Blasphemous",
+  "Antediluvian",
 ] as const;
 export type VividName = (typeof VIVID_NAMES)[number];
