@@ -24,5 +24,25 @@ export type Vivid = {
   type: VividType;
 };
 
-export const VIVID_NAMES = ["Phantom"] as const;
+export const VIVID_NAMES = [
+  "Phantom",
+  "Ephemeral",
+  "Celestial",
+  "Cataclysmic",
+
+  "Jaded",
+  "Ethereal",
+  "Illusive",
+  "Cryptic",
+
+  "Arcane",
+  "Resolute",
+  "Fathomless",
+  "Elemental",
+
+  "Corrosive",
+  "Unidentified",
+  "Intoxicating",
+  "Tartarean",
+] as const;
 export type VividName = (typeof VIVID_NAMES)[number];
