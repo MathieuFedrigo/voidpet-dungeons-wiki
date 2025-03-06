@@ -1,6 +1,6 @@
 import { Vivid, VividName } from "./vivid.type";
 
-export const VOID_VIVIDS_CONFIG: Record<VividName, Vivid> = {
+export const VIVIDS_CONFIG: Record<VividName, Vivid> = {
   // ------------------ VOID ------------------
   Phantom: {
     name: "Phantom",

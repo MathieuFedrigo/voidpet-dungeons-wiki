@@ -1,12 +1,12 @@
 import styled from "@emotion/native";
 
-import { VOID_VIVIDS_CONFIG } from "./vivid.config";
+import { VIVIDS_CONFIG } from "./vivid.config";
 import { VIVID_IMAGE } from "./vivid.images";
 import { Vivid, VividName, VividRarity } from "./vivid.type";
 import { VividColors } from "./VividColors";
 
 export const VividCardById = ({ id }: { id: VividName }) => (
-  <VividCard vivid={VOID_VIVIDS_CONFIG[id]} />
+  <VividCard vivid={VIVIDS_CONFIG[id]} />
 );
 
 const VividCard = ({
