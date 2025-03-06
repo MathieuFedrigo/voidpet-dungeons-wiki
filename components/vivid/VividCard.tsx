@@ -3,7 +3,7 @@ import styled from "@emotion/native";
 import { ItemRarity } from "../item/item.type";
 import { ThemedText } from "../ui/ThemedText";
 import { VOID_VIVIDS_CONFIG } from "./vivid.config";
-import { Vivid, VividName } from "./vivid.type";
+import { Vivid, VividName, VividRarity } from "./vivid.type";
 
 export const VividCardById = ({ id }: { id: VividName }) => (
   <VividCard vivid={VOID_VIVIDS_CONFIG[id]} />
@@ -31,7 +31,7 @@ const VividCard = ({
         <ItemInfo>
           <ImageBackground rarity="common" />
           <ItemFullDescription>
-            <ItemName>{name.toUpperCase()}</ItemName>
+            <ItemName rarity={rarity}>{name.toUpperCase()}</ItemName>
             {description && <Description>{description}</Description>}
           </ItemFullDescription>
         </ItemInfo>
@@ -59,16 +59,16 @@ const ItemFullDescription = styled.View(() => ({
   flex: 1,
 }));
 
-const ItemName = styled.Text(({ theme }) => ({
+const ItemName = styled.Text<{ rarity: VividRarity }>(({ theme, rarity }) => ({
   fontSize: 18,
   fontWeight: "900",
-  color: theme.colors.voidpet.basic.dark,
+  color: theme.colors.voidpet.basic.vivid[rarity],
   marginBottom: 4,
 }));
 
 const Description = styled.Text(({ theme }) => ({
   fontSize: 14,
-  color: theme.colors.voidpet.basic.dark,
+  color: theme.colors.voidpet.basic.lightText,
 }));
 
 const ImageBackground = styled.View<{ rarity: ItemRarity }>(() => ({

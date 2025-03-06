@@ -15,5 +15,5 @@ export default function VividsScreen() {
 const Container = styled(SafeAreaView)(({ theme }) => ({
   flex: 1,
   padding: 12,
-  backgroundColor: theme.colors.voidpet.basic.bossBackground,
+  backgroundColor: theme.colors.voidpet.basic.vividBackground,
 }));
