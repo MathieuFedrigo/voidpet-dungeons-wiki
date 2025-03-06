@@ -30,7 +30,10 @@ const VividCard = ({
       <Content>
         <VividColorsContainer rarity="common" />
         <VerticalContainer>
-          <Name rarity={rarity}>{name.toUpperCase()}</Name>
+          <HorizontalContainer>
+            <Name rarity={rarity}>{name.toUpperCase()}</Name>
+            <Cost>{cost}</Cost>
+          </HorizontalContainer>
           <Description>{description}</Description>
         </VerticalContainer>
       </Content>
@@ -54,11 +57,21 @@ const VerticalContainer = styled.View(() => ({
   flex: 1,
 }));
 
+const HorizontalContainer = styled.View(() => ({
+  flexDirection: "row",
+  justifyContent: "space-between",
+}));
+
 const Name = styled.Text<{ rarity: VividRarity }>(({ theme, rarity }) => ({
   fontSize: 18,
   fontWeight: "900",
   color: theme.colors.voidpet.basic.vivid[rarity],
   marginBottom: 4,
+}));
+
+const Cost = styled.Text(({ theme }) => ({
+  fontSize: 14,
+  color: theme.colors.voidpet.basic.lightText,
 }));
 
 const Description = styled.Text(({ theme }) => ({
