@@ -28,13 +28,11 @@ const VividCard = ({
         Colors: {JSON.stringify(colors, null, 2)}
       </ThemedText>
       <Content>
-        <ItemInfo>
-          <ImageBackground rarity="common" />
-          <ItemFullDescription>
-            <ItemName rarity={rarity}>{name.toUpperCase()}</ItemName>
-            {description && <Description>{description}</Description>}
-          </ItemFullDescription>
-        </ItemInfo>
+        <VividColorsContainer rarity="common" />
+        <VerticalContainer>
+          <Name rarity={rarity}>{name.toUpperCase()}</Name>
+          <Description>{description}</Description>
+        </VerticalContainer>
       </Content>
     </>
   );
@@ -42,6 +40,7 @@ const VividCard = ({
 
 const Content = styled.View(() => ({
   backgroundColor: "#00000055",
+  flexDirection: "row",
 
   minWidth: 220,
   maxWidth: 320,
@@ -50,16 +49,12 @@ const Content = styled.View(() => ({
   width: "100%",
 }));
 
-const ItemInfo = styled.View(() => ({
-  flexDirection: "row",
-}));
-
-const ItemFullDescription = styled.View(() => ({
+const VerticalContainer = styled.View(() => ({
   padding: 16,
   flex: 1,
 }));
 
-const ItemName = styled.Text<{ rarity: VividRarity }>(({ theme, rarity }) => ({
+const Name = styled.Text<{ rarity: VividRarity }>(({ theme, rarity }) => ({
   fontSize: 18,
   fontWeight: "900",
   color: theme.colors.voidpet.basic.vivid[rarity],
@@ -71,7 +66,7 @@ const Description = styled.Text(({ theme }) => ({
   color: theme.colors.voidpet.basic.lightText,
 }));
 
-const ImageBackground = styled.View<{ rarity: ItemRarity }>(() => ({
+const VividColorsContainer = styled.View<{ rarity: ItemRarity }>(() => ({
   width: 96,
   height: 96,
   backgroundColor: "#00000095",
