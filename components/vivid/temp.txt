@@ -1,0 +1,19 @@
++5% defense
++5% attack
++5% speed
++5% stamina
+
++5% critical damage
++2.5% non-boss damage
++10% healing received
++1% armor penetration
+
++5% boss damage
++5% basic attack damage
++5% critical chance
++10% healing effectiveness
+
+Heal for 5% of max health when an enemy dies
+Gain 10% of defense as attack
+Increase damage by 10% when health is below 30%
++3% health each turn
