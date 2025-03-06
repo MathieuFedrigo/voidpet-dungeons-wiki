@@ -24,9 +24,11 @@ const RATIO_PRIMARY = 3 / 5;
 const RATIO_SECONDARY = 2 / 3;
 
 const PRIMARY_COLOR_WIDTH = COLORS_CONTAINER_SIZE * RATIO_PRIMARY;
+const PRIMARY_COLOR_HEIGHT = COLORS_CONTAINER_SIZE;
 const SECONDARY_COLOR_WIDTH = COLORS_CONTAINER_SIZE * (1 - RATIO_PRIMARY);
 const SECONDARY_COLOR_HEIGHT = COLORS_CONTAINER_SIZE * RATIO_SECONDARY;
-const TERTIARY_COLOR_SIZE = COLORS_CONTAINER_SIZE * (1 - RATIO_SECONDARY);
+const TERTIARY_COLOR_WIDTH = COLORS_CONTAINER_SIZE * (1 - RATIO_PRIMARY);
+const TERTIARY_COLOR_HEIGHT = COLORS_CONTAINER_SIZE * (1 - RATIO_SECONDARY);
 
 const DarkContainer = styled.View({
   width: DARK_CONTAINER_SIZE,
@@ -54,7 +56,7 @@ const ColorsVerticalContainer = styled.View({
 
 const PrimaryColor = styled.View<{ color: string }>(({ color }) => ({
   width: PRIMARY_COLOR_WIDTH,
-  height: COLORS_CONTAINER_SIZE,
+  height: PRIMARY_COLOR_HEIGHT,
   backgroundColor: color,
 }));
 
@@ -65,7 +67,7 @@ const SecondaryColor = styled.View<{ color: string }>(({ color }) => ({
 }));
 
 const TertiaryColor = styled.View<{ color: string }>(({ color }) => ({
-  width: TERTIARY_COLOR_SIZE,
-  height: TERTIARY_COLOR_SIZE,
+  width: TERTIARY_COLOR_WIDTH,
+  height: TERTIARY_COLOR_HEIGHT,
   backgroundColor: color,
 }));
