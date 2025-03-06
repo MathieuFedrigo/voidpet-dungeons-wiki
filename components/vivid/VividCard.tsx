@@ -1,6 +1,5 @@
 import styled from "@emotion/native";
 
-import { ItemRarity } from "../item/item.type";
 import { ThemedText } from "../ui/ThemedText";
 import { VOID_VIVIDS_CONFIG } from "./vivid.config";
 import { Vivid, VividName, VividRarity } from "./vivid.type";
@@ -28,7 +27,7 @@ const VividCard = ({
         Colors: {JSON.stringify(colors, null, 2)}
       </ThemedText>
       <Content>
-        <VividColorsContainer rarity="common" />
+        <VividColorsContainer />
         <VerticalContainer>
           <HorizontalContainer>
             <Name rarity={rarity}>{name.toUpperCase()}</Name>
@@ -79,7 +78,7 @@ const Description = styled.Text(({ theme }) => ({
   color: theme.colors.voidpet.basic.lightText,
 }));
 
-const VividColorsContainer = styled.View<{ rarity: ItemRarity }>(() => ({
+const VividColorsContainer = styled.View(() => ({
   width: 96,
   height: 96,
   backgroundColor: "#00000095",
