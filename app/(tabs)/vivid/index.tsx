@@ -2,12 +2,12 @@
 import styled from "@emotion/native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import { ThemedText } from "@/components/ui/ThemedText";
+import { VividCardById } from "@/components/vivid/VividCard";
 
 export default function VividsScreen() {
   return (
     <Container>
-      <ThemedText>test</ThemedText>
+      <VividCardById id="Phantom" />
     </Container>
   );
 }
