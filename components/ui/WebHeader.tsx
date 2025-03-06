@@ -7,6 +7,7 @@ const navItems = [
   { label: "Home", path: "/" },
   { label: "Items", path: "/item" },
   { label: "Boss", path: "/boss" },
+  { label: "Vivid", path: "/vivid" },
 ] as const;
 
 export default function Header() {
