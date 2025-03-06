@@ -1,6 +1,7 @@
 import { Vivid, VividName } from "./vivid.type";
 
 export const VOID_VIVIDS_CONFIG: Record<VividName, Vivid> = {
+  // ------------------ VOID ------------------
   Phantom: {
     name: "Phantom",
     rarity: "Rare",
@@ -197,6 +198,7 @@ export const VOID_VIVIDS_CONFIG: Record<VividName, Vivid> = {
     type: "Void",
   },
 
+  // ------------------ EARTH ------------------
   Allegiant: {
     name: "Allegiant",
     rarity: "Rare",
