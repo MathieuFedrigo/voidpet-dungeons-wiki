@@ -1,4 +1,4 @@
-import { Vivid, VividName } from "./vivid.type";
+import { Vivid, VIVID_NAMES, VividName, VividType } from "./vivid.type";
 
 export const VIVIDS_CONFIG: Record<VividName, Vivid> = {
   // ------------------ VOID ------------------
@@ -593,3 +593,12 @@ export const DEFAULT_VIVIDS_CONFIG = {
     type: "Earth",
   },
 };
+
+const getVividNamesByType = (type: VividType) =>
+  VIVID_NAMES.filter((name) => VIVIDS_CONFIG[name].type === type);
+export const VOID_VIVID_NAMES = getVividNamesByType("Void");
+export const EARTH_VIVID_NAMES = getVividNamesByType("Earth");
+export const WATER_VIVID_NAMES = getVividNamesByType("Water");
+export const FIRE_VIVID_NAMES = getVividNamesByType("Fire");
+export const METAL_VIVID_NAMES = getVividNamesByType("Metal");
+export const WOOD_VIVID_NAMES = getVividNamesByType("Wood");
