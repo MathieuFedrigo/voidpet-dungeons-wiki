@@ -2,6 +2,7 @@ import styled from "@emotion/native";
 
 import { ThemedText } from "../ui/ThemedText";
 import { VOID_VIVIDS_CONFIG } from "./vivid.config";
+import { VIVID_IMAGE } from "./vivid.images";
 import { Vivid, VividName, VividRarity } from "./vivid.type";
 import { VividColors } from "./VividColors";
 
@@ -32,7 +33,10 @@ const VividCard = ({
         <VerticalContainer>
           <HorizontalContainer>
             <Name rarity={rarity}>{name.toUpperCase()}</Name>
-            <Cost>{cost}</Cost>
+            <CostContainer>
+              <Cost>{cost}</Cost>
+              <VividImage source={VIVID_IMAGE} resizeMode="contain" />
+            </CostContainer>
           </HorizontalContainer>
           <Description>{description}</Description>
         </VerticalContainer>
@@ -69,9 +73,19 @@ const Name = styled.Text<{ rarity: VividRarity }>(({ theme, rarity }) => ({
   marginBottom: 4,
 }));
 
+const CostContainer = styled.View({
+  flexDirection: "row",
+  gap: 4,
+});
+
 const Cost = styled.Text(({ theme }) => ({
   fontSize: 14,
   color: theme.colors.voidpet.basic.lightText,
+}));
+
+const VividImage = styled.Image(() => ({
+  width: 16,
+  height: 16,
 }));
 
 const Description = styled.Text(({ theme }) => ({
