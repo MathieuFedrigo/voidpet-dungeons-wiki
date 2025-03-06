@@ -39,6 +39,13 @@ const voidpetBasicColors = {
   bossCardBackground: "#5969E3",
   bossCardBorder: "#7281F6",
   bossText: "#BBC4FA",
+  vivid: {
+    Rare: "#E18882",
+    Fabled: "#DBB05F",
+    Mythical: "#9079F7",
+    Absurd: "#403DEC",
+  },
+  vividBackground: "#222222",
 };
 
 export const lightColors = {
