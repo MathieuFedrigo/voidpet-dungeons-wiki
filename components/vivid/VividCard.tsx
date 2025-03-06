@@ -1,6 +1,5 @@
 import styled from "@emotion/native";
 
-import { ThemedText } from "../ui/ThemedText";
 import { VOID_VIVIDS_CONFIG } from "./vivid.config";
 import { VIVID_IMAGE } from "./vivid.images";
 import { Vivid, VividName, VividRarity } from "./vivid.type";
@@ -16,32 +15,19 @@ const VividCard = ({
   vivid: Vivid;
 }) => {
   return (
-    <>
-      <ThemedText>
-        {name}
-        {"\n"}
-        {description}
-        {"\n"}
-        Cost: {cost}
-        {"\n"}
-        Rarity: {rarity}
-        {"\n"}
-        Colors: {JSON.stringify(colors, null, 2)}
-      </ThemedText>
-      <Content>
-        <VividColors colors={colors} />
-        <VerticalContainer>
-          <HorizontalContainer>
-            <Name rarity={rarity}>{name.toUpperCase()}</Name>
-            <CostContainer>
-              <Cost>{cost}</Cost>
-              <VividImage source={VIVID_IMAGE} resizeMode="contain" />
-            </CostContainer>
-          </HorizontalContainer>
-          <Description>{description}</Description>
-        </VerticalContainer>
-      </Content>
-    </>
+    <Content>
+      <VividColors colors={colors} />
+      <VerticalContainer>
+        <HorizontalContainer>
+          <Name rarity={rarity}>{name.toUpperCase()}</Name>
+          <CostContainer>
+            <Cost>{cost}</Cost>
+            <VividImage source={VIVID_IMAGE} resizeMode="contain" />
+          </CostContainer>
+        </HorizontalContainer>
+        <Description>{description}</Description>
+      </VerticalContainer>
+    </Content>
   );
 };
 
