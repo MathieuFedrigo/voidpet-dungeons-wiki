@@ -62,6 +62,7 @@ export default function ItemsScreen() {
   const { numColumns, columnWrapperStyle } = useMaxNumColumns({
     itemWidth: 420,
     itemSpacing: 16,
+    maxColumns: 3,
   });
 
   return (

@@ -12,6 +12,7 @@ export default function BossesScreen() {
   const { numColumns, columnWrapperStyle } = useMaxNumColumns({
     itemWidth: 420,
     itemSpacing: 16,
+    maxColumns: 3,
   });
 
   return (
