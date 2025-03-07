@@ -11,7 +11,8 @@ export const VividColors = ({
     <ColorsContainer>
       <PrimaryColor color={primary} />
       <ColorsVerticalContainer>
-        <SecondaryColor color={secondary} /> <TertiaryColor color={tertiary} />
+        <SecondaryColor color={secondary} />
+        <TertiaryColor color={tertiary} />
       </ColorsVerticalContainer>
     </ColorsContainer>
   </DarkContainer>
